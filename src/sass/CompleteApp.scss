@@ -78,7 +78,6 @@ table {
 @import url('https://fonts.googleapis.com/css2?family=Charmonman&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
-
 //zachowanie WYŁĄCZNIE NA STRONCE !!!!!!!!!!!
 
 @media only screen and (min-width: 999px) {
@@ -86,6 +85,7 @@ table {
   .navigation {
     display: flex;
     flex-direction: row;
+    background-color: #c78a2f;
   }
   .mobileAppNavigation,
   .mobileNavigation {
@@ -381,7 +381,6 @@ table {
       background-color: #5b252b;
     }
   }
-
 
 
   //APKA==================================================
