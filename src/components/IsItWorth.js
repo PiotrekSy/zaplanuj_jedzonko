@@ -2,7 +2,7 @@ import React from "react";
 
 const IsItWorth = () => {
     return (
-        <div className="">
+        <div className="isItWorth">
 
         </div>
     )

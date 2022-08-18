@@ -9,7 +9,7 @@ const MobileNavbar = () => {
 
     const showSidebar = () => setVisibility(!visibility);
 
-    return (<div className="mobileNavigation">
+    return (<div className="mobileAppNavigation">
             {/*buttons to open and close mobile menu*/}
             <div id="menu__toggle" style={{display: visibility ? "none" : "flex"}} className="menu__btn">
                 <label className="menu__btn" htmlFor="menu__toggle" onClick={showSidebar}>
@@ -32,13 +32,9 @@ const MobileNavbar = () => {
                     {/*links*/}
 
                     <li className="nav-text">
-                        <Link className="nav-text" to="carousel"
-                              spy={true}
-                              smooth={true}
-                              duration={500}
-                              onClick={showSidebar}>
+                        <LinkRouter className="nav-text" to="/" onClick={showSidebar}>
                             <p className="nav-text">HOME</p>
-                        </Link>
+                        </LinkRouter>
                     </li>
 
                     <li className="nav-text">
@@ -51,6 +47,7 @@ const MobileNavbar = () => {
                             <p className="nav-text">DLACZEGO WARTO?</p>
                         </Link>
                     </li>
+
                     <li className="nav-text">
                         <Link className="nav-text"
                               to="about"

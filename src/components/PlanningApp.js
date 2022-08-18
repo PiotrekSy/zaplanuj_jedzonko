@@ -1,14 +1,10 @@
 import React from "react";
-import MobileNavbar from "./MobileNavbar";
-import Navbar from "./Navbar";
-
+import AppHeader from "./AppHeader";
 
 const PlanningApp = () => {
     return (
         <div className="planningAppBackground">
-            <Navbar/>
-            <MobileNavbar/>
-            <div>APKA</div>
+            <AppHeader/>
         </div>
     )
 }

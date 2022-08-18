@@ -56,6 +56,7 @@ footer, header, hgroup, menu, nav, section {
 
 body {
   line-height: 1;
+  font-family: 'Open Sans', sans-serif;
 }
 
 ol, ul {
@@ -72,9 +73,9 @@ table {
 }
 
 @import url('https://fonts.googleapis.com/css2?family=Charmonman&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 //navigation
-
 
 .navigation {
   @media only screen and (max-width: 999px) {
@@ -118,7 +119,7 @@ table {
   }
 }
 
-.mobileNavigation {
+.mobileAppNavigation, .mobileNavigation {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -130,6 +131,45 @@ table {
   }
 
   @media only screen and (max-width: 1000px) {
+
+    .mobileMenuIcon {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      width: 100%;
+      z-index: 2;
+
+      .topBar {
+        position: relative;
+        width: 50%;
+        height: 3px;
+        background-color: #c78a2f;
+        top: -10%;
+        box-shadow: rgba(0, 0, 0, 0.22) 2px 2px 0.4px;
+      }
+
+      .middleBar {
+        position: relative;
+        width: 50%;
+        height: 3px;
+        background-color: #c78a2f;
+        box-shadow: rgba(0, 0, 0, 0.22) 2px 2px 0.4px;
+      }
+
+      .bottomBar {
+        position: relative;
+        width: 50%;
+        height: 3px;
+        background-color: #c78a2f;
+        top: 10%;
+        box-shadow: rgba(0, 0, 0, 0.22) 2px 2px 0.4px;
+      }
+
+    }
+
     a {
       color: #000000;
       text-decoration: none;
@@ -146,7 +186,7 @@ table {
     }
 
     .nav-menu {
-      background-color: #939090;
+      background-color: rgba(147, 144, 144, 0.87);
       width: 100vw;
       height: 100vh;
       display: flex;
@@ -156,11 +196,51 @@ table {
       top: 0;
       right: -100%;
       transition: 0.2s;
+
+      .mobileMenuCloseButton {
+        top: 0;
+        left: 80vw;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+
+        .mobileMenuCloseIcon {
+          position: absolute;
+          top: 0;
+          right: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 10vh;
+          width: 10vh;
+          z-index: 2;
+
+          .crossBarOne {
+            position: relative;
+            width: 50%;
+            height: 3px;
+            background-color: #000000;
+            box-shadow: rgba(0, 0, 0, 0.27) 2px -2px 0.4px;
+            transform: rotate(45deg);
+          }
+
+          .crossBarTwo {
+            position: relative;
+            top: -3px;
+            width: 50%;
+            height: 3px;
+            background-color: #000000;
+            box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 0.4px;
+            transform: rotate(-45deg);
+          }
+        }
+      }
     }
 
     .nav-menu.active {
       right: 0;
-      transition: 0.2s;
+      transition: 0.25s;
     }
 
     .nav-text {
@@ -171,13 +251,13 @@ table {
       align-self: center;
       list-style: none;
       width: 100vw;
-      height: 5rem;
+      height: 4rem;
     }
 
     .nav-text a {
+      font-size: clamp(1em, 1.2em, 1.4em);
       text-decoration: none;
       color: #80511f;
-      font-size: 2rem;
       width: 100%;
       height: 100%;
       justify-self: center;
@@ -189,10 +269,11 @@ table {
     a {
       display: flex;
       justify-content: center;
+
     }
 
     .nav-menu-items a:hover {
-      background-color: rgba(122, 122, 122, 0.77);
+      background-color: rgba(122, 122, 122, 0.94);
     }
 
     .nav-menu-items {
@@ -218,21 +299,24 @@ table {
   }
 }
 
-
 //homepage:
 
+@media only screen and (min-width: 1000px) {
 
-@media only screen and (max-width: 1000px) {
+}
 
-  .header {
+@media only screen and (max-width: 999px) {
+
+  .header,
+  .appHeader {
+    position: fixed;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    position: fixed;
     height: clamp(10vh, 10vh, 10vh);
     width: 100vw;
-    background-color: rgba(35, 35, 35, 0.75);
+    background-color: rgb(35, 35, 35);
 
     .logo {
       font-family: 'Charmonman', cursive;
@@ -255,6 +339,41 @@ table {
       }
     }
   }
+
+  .carouselWrapper {
+    height: 100vh;
+    width: 100vw;
+    background-color: #c78a2f;
+
+    .carousel {
+
+      top: 10vh;
+      height:75%;
+      background-color: #1f3942;
+    }
+
+    .newsletter {
+      height: 25%;
+      background-color: #202d42;
+    }
+  }
+
+  .about {
+    height: 100vh;
+    width: 100vw;
+    background-color: #deb881;
+  }
+  .isItWorth {
+    height: 100vh;
+    width: 100vw;
+    background-color: #2c1d05;
+  }
+  .contact {
+    height: 100vh;
+    width: 100vw;
+    background-color: #6c655b;
+  }
+
 }
 
 //planningApp:
