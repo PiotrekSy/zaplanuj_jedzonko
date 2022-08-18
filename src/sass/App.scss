@@ -1,0 +1,265 @@
+/*## KOLORY:*/
+/*`#5B605F`  - panel boczny, nawigacja */
+/*`#4a4a49`   - nagłówek, , kolor tekstu w kolumnach*/
+/*`#FF6600`  - przyciski, wyróżnienia, nagłówki ekranów*/
+/*`#FFFFFA` - kolor tła ekranów*/
+/*`#3498DB` - kolor wiadomości typu info,*/
+/*`#FFB03B`  - kolor wiadomości typu warning*/
+/*`#468966`  - kolor wiadomości typu success */
+/*`#BD4932`  - kolor ikony kosza*/
+/*`#A1A194`  - kolor tekstu z wierszy w tabelach, ikony rozszerzonych funkcji*/
+
+
+/*## FONTY*/
+/*`Open Sans ` - tekst*/
+/*`Charmonman` - logo */
+/*`14px` - wielkość bazowa*/
+/*`Font Awesome Icons` - [tutaj opis](https://fontawesome.com/free)*/
+
+/*## LOGO*/
+/*   Logo to napis  **ZaplanujJedzonko** w czcionce `Charmonman`, gdzie:*/
+/*> słowo `Zaplanuj` jest kolorem `białym`,*/
+/*   > słowo `Jedzonko` jest kolorem `#E58A20`*/
+
+/*## TŁO*/
+/*   Tło aplikacji jest załączone w tej karcie.*/
+
+/*## OBRAZY*/
+/*   [Cooking Photos](https://www.pexels.com/search/cooking/) - obrazy oraz zdjęcia do wykorzystania na Landing Page. */
+
+//reset:
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Charmonman&display=swap');
+
+//navigation
+
+
+.navigation {
+  @media only screen and (max-width: 999px) {
+    display: none;
+  }
+
+  @media only screen and (min-width: 1000px) {
+    a {
+      color: #000000;
+      text-decoration: none;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+
+    position: absolute;
+    top: 30px;
+    width: 100%;
+    align-items: center;
+    height: 100%;
+    right: 30px;
+
+    .navButtons {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-end;
+
+
+      .navButtonWrapper {
+        display: flex;
+        position: relative;
+        height: 80px;
+        width: 80px;
+        margin-bottom: 10px;
+        background: black;
+        justify-content: center;
+        align-items: center;
+
+      }
+    }
+  }
+}
+
+.mobileNavigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: clamp(10vh, 10vh, 10vh);
+  width: clamp(10vh, 10vh, 10vh);
+
+  @media only screen and (min-width: 999px) {
+    display: none;
+  }
+
+  @media only screen and (max-width: 1000px) {
+    a {
+      color: #000000;
+      text-decoration: none;
+      font-size: 1rem;
+    }
+
+    .menu__btn {
+      position: relative;
+      align-self: center;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      //background: url("../menu_FILL0_wght400_GRAD0_opsz48.svg") no-repeat center;
+    }
+
+    .nav-menu {
+      background-color: #939090;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: fixed;
+      top: 0;
+      right: -100%;
+      transition: 0.2s;
+    }
+
+    .nav-menu.active {
+      right: 0;
+      transition: 0.2s;
+    }
+
+    .nav-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-self: center;
+      align-self: center;
+      list-style: none;
+      width: 100vw;
+      height: 5rem;
+    }
+
+    .nav-text a {
+      text-decoration: none;
+      color: #80511f;
+      font-size: 2rem;
+      width: 100%;
+      height: 100%;
+      justify-self: center;
+      align-self: center;
+      display: flex;
+      align-items: center;
+    }
+
+    a {
+      display: flex;
+      justify-content: center;
+    }
+
+    .nav-menu-items a:hover {
+      background-color: rgba(122, 122, 122, 0.77);
+    }
+
+    .nav-menu-items {
+      justify-self: center;
+      align-self: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100vw;
+    }
+
+    .navbar-toggle {
+      background-color: #ffffff;
+      width: 100%;
+      height: 80px;
+      display: flex;
+      justify-self: center;
+      align-self: center;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+}
+
+
+//homepage:
+
+
+@media only screen and (max-width: 1000px) {
+
+  .header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    height: clamp(10vh, 10vh, 10vh);
+    width: 100vw;
+    background-color: rgba(35, 35, 35, 0.75);
+
+    .logo {
+      font-family: 'Charmonman', cursive;
+      display: flex;
+      flex-direction: row;
+
+      .zaplanuj {
+        margin-left: 5vw;
+        color: white;
+        font-size: clamp(3vh, 4vw, 4.5vh);
+      }
+
+      .space {
+        width: 2vw;
+      }
+
+      .jedzonko {
+        font-size: clamp(3vh, 4vw, 4.5vh);
+        color: #E58A20;
+      }
+    }
+  }
+}
+
+//planningApp:
+.planningAppBackground {
+  background-color: #a69494;
+  height: 100vh;
+  width: 100vw;
+}
