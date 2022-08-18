@@ -1,7 +1,7 @@
 import './sass/CompleteApp.scss';
-import HomePage from "./components/HomePage"
+import HomePage from "./componentsHomePage/HomePage"
 import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
-import PlanningApp from "./components/PlanningApp"
+import PlanningApp from "./componentsApp/PlanningApp"
 import React from "react";
 
 function CompleteApp() {

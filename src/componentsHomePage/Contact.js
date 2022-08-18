@@ -1,10 +1,12 @@
 import React from "react";
-import Header from "./Header";
+import ContactMedia from "./ContactMedia";
+import ContactFooter from "./ContactFooter";
 
 const Contact = () => {
     return (
         <div className="contact">
-            <Header/>
+            <ContactMedia/>
+            <ContactFooter/>
         </div>
     )
 }

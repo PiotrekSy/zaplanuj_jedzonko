@@ -43,7 +43,7 @@ const MobileNavbar = () => {
 
                     <li className="nav-text">
                         <Link className="nav-text"
-                              to="isItWorth"
+                              to="benefits"
                               spy={true}
                               smooth={true}
                               duration={500}

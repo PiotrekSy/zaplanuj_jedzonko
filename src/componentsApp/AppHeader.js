@@ -1,4 +1,4 @@
-import Navbar from "./Navbar";
+import Navbar from "../componentsHomePage/Navbar";
 import AppNavbar from "./AppNavbar";
 import React from "react";
 
