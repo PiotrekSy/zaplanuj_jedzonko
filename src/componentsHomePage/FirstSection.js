@@ -5,7 +5,7 @@ import Newsletter from "./Newsletter";
 const FirstSection = () => {
     return (
         <div className="carouselWrapper">
-            <Carousel/>
+            <Carousel className="carousel"/>
             <Newsletter/>
         </div>
     )
