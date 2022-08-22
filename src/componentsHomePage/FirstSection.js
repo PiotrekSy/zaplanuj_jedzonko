@@ -6,7 +6,7 @@ const FirstSection = () => {
     return (
         <div className="carouselWrapper">
             <Carousel className="carousel"/>
-            <Newsletter/>
+            <Newsletter className="newsletter"/>
         </div>
     )
 }
