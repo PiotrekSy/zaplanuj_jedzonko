@@ -1,12 +1,12 @@
 import React from "react";
 import ThreeBenefits from "./ThreeBenefits"
-import EmailContact from "./PhoneContact"
+import PhoneContact from "./PhoneContact"
 
 const Benefits = () => {
     return (
         <div className="benefits">
             <ThreeBenefits/>
-            <EmailContact/>
+            <PhoneContact/>
         </div>
     )
 }

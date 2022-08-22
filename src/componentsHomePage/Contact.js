@@ -5,8 +5,8 @@ import ContactFooter from "./ContactFooter";
 const Contact = () => {
     return (
         <div className="contact">
-            <ContactMedia/>
-            <ContactFooter/>
+            <ContactMedia className="contactMedia"/>
+            <ContactFooter className="contactFooter"/>
         </div>
     )
 }

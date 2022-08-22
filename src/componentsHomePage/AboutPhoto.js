@@ -2,9 +2,7 @@ import React from "react";
 
 const AboutPhoto = () => {
     return (
-        <div className="aboutPhoto">
-
-        </div>
+        <div className="aboutPhoto"/>
     )
 }
 
