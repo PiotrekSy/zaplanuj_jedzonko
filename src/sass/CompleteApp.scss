@@ -363,14 +363,16 @@ table {
         .carouselTitle {
           text-align: center;
           color: #a60b0b;
-          width: 5vw;
+          font-size: 1.5rem;
+          width: 100vw;
+          margin-bottom: 5vh;
           z-index: 3;
         }
 
         .carouselText {
-
           color: black;
-          width: 100vw;
+
+          width: 80vw;
           z-index: 3;
         }
 
