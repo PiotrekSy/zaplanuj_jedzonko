@@ -339,7 +339,7 @@ table {
 
     .carousel {
       top: 10vh;
-      height: 75%;
+      //height: 65%;
       width: 100%;
       display: flex;
       overflow-x: scroll;
@@ -376,19 +376,53 @@ table {
           width: 80vw;
           z-index: 3;
         }
-
       }
     }
 
-    .newsletterWrapper {
-      .newsletter {
-        height: 25vh;
-        width: 100vw;
-        background-color: #202d42;
+    .newsletter {
+      height: 25vh;
+      width: 100vw;
+      background-color: #232324;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+
+      .newsletterText {
+        color: white;
+        font-size: 0.8rem;
+        align-self: center;
+        justify-self: center;
+        width: 80vw;
+      }
+
+      .newsletterInputWrapper {
         display: flex;
         flex-direction: row;
-        z-index: 6;
+        justify-content: center;
+        align-items: center;
+        width: 100vw;
+        margin-top: 3vh;
+
+        .newsletterInputForm {
+          width: 80vw;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+
+          .newsletterInput {
+            width: 100%;
+          }
+
+          .newsletterButton {
+            width: 100%;
+            background: #c58930;
+            border: 1px solid #f9ad3b;
+          }
+        }
       }
+
     }
   }
 
