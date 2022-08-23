@@ -428,19 +428,26 @@ table {
 
   //Benefits
   .benefits {
-    height: 100vh;
+    height: 180vh;
     width: 100vw;
-    background-color: #2c1d05;
+
 
     .threeBenefits {
-      height: 75%;
+      padding-top: 15vh;
+      height: 150vh;
       width: 100vw;
-      background-color: #4c8091;
+      background-color: #ffffff;
+
+      .benefitsItem {
+        height: 50vh;
+      }
+
+
     }
 
-    .phoneContact {
-      height: 25%;
-      width: 100vw;
+    .benefitsContactWrapper {
+      height: 25vh;
+      width: 190vw;
       background-color: #2d4f49;
     }
   }

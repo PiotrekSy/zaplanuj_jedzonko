@@ -15,7 +15,7 @@ const ThreeBenefits = () => {
     }, [])
 
     return (
-        <div>
+        <div className="threeBenefits">
             {data.map((item, index) =>
                 <div className="benefitsItem"
                      key={index}>
