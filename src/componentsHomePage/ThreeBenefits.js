@@ -1,29 +1,27 @@
 import React from "react";
+import {useEffect, useState} from "react";
+import {collection, onSnapshot} from "firebase/firestore";
+import db from "../firebase";
 
 const ThreeBenefits = () => {
+
+
+    const [data, setData] = useState([])
+
+    useEffect(() => {
+        onSnapshot(collection(db, "carousel"), (snapshot) => {
+            setData(snapshot.docs.map(doc => doc.data()))
+        })
+    }, [])
+
     return (
-        <div className="threeBenefits">
-            <div className="benefitItem">
-                <div className="benefitIcon"></div>
-                <div className="benefitTitle">Benefit 1</div>
-                <div className="benefitText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur
-                    deleniti ducimus hic incidunt laboriosam, neque omnis rerum sequi vitae voluptas.
-                </div>
-            </div>
-            <div className="benefitItem">
-                <div className="benefitIcon"></div>
-                <div className="benefitTitle">Benefit 2</div>
-                <div className="benefitText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci
-                    blanditiis consectetur deserunt ea fugiat fugit harum nihil, omnis sapiente ullam!
-                </div>
-            </div>
-            <div className="benefitItem">
-                <div className="benefitIcon"></div>
-                <div className="benefitTitle"> Benefit 3</div>
-                <div className="benefitText">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet, blanditiis
-                    et eveniet in libero nemo nesciunt nostrum sint sit tenetur!
-                </div>
-            </div>
+        <div>
+            {data.map((item, index) =>
+                <div className="benefitsItem"
+                     key={index}>
+                    <div className="carouselTitle">{item.title}</div>
+                    <div className="carouselText">{item.text}</div>
+                </div>)}
         </div>
     )
 }

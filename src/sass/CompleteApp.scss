@@ -169,8 +169,9 @@ table {
     }
 
     .nav-menu {
-      background-color: rgb(147, 144, 144);
+      background-color: rgba(147, 144, 144, 0.96);
       width: 100vw;
+      font-weight: bold;
       height: 100vh;
       display: flex;
       justify-content: center;
@@ -354,7 +355,7 @@ table {
         align-items: center;
         margin-top: 10vh;
         height: 65vh;
-        width: 100vw;
+        min-width: 100vw;
         object-fit: cover;
         scroll-snap-align: start;
         z-index: -1;
@@ -364,7 +365,7 @@ table {
           text-align: center;
           color: #a60b0b;
           font-size: 1.5rem;
-          width: 100vw;
+          width: 80vw;
           margin-bottom: 5vh;
           z-index: 3;
         }
@@ -379,14 +380,16 @@ table {
       }
     }
 
-    .newsletter {
-      height: 25%;
-      width: 100vw;
-      background-color: #202d42;
-      display: flex;
-      flex-direction: row;
+    .newsletterWrapper {
+      .newsletter {
+        height: 25vh;
+        width: 100vw;
+        background-color: #202d42;
+        display: flex;
+        flex-direction: row;
+        z-index: 6;
+      }
     }
-
   }
 
   //Benefits
