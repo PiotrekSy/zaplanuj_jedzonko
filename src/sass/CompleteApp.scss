@@ -168,7 +168,7 @@ table {
       }
 
       .nav-menu {
-        background-color: rgba(5, 5, 5, 0.96);
+        background-color: rgba(5, 5, 5, 0.93);
         width: 100vw;
         font-weight: bold;
         height: 100vh;
@@ -665,9 +665,9 @@ table {
           p {
             align-self: center;
             width: 90vw;
-            font-weight: bold;
+            font-weight: 1000;
             text-align: center;
-            text-shadow: black 1px 1px 2px;
+            line-height: 1.1rem;
           }
         }
 
@@ -676,7 +676,6 @@ table {
           font-size: 1.2rem;
           font-weight: bold;
           text-align: center;
-          text-shadow: black 1px 1px 2px;
         }
 
         .contactIcons {
@@ -688,16 +687,18 @@ table {
           align-items: center;
 
           .contactIcon {
-            height: 10vh;
-            width: 10vh;
+            height: 8vh;
+            width: 8vh;
           }
 
           .icon1 {
+            background-repeat: no-repeat;
             background-size: contain;
             background-image: url("Black-icon-facebook-logo-PNG.png");
           }
 
           .icon2 {
+            background-repeat: no-repeat;
             background-size: contain;
             background-image: url("linkedin_black_logo_icon_147114.png");
           }
@@ -705,6 +706,7 @@ table {
           .icon3 {
             background-size: contain;
             background-image: url("github-logo.png");
+            background-repeat: no-repeat;
           }
         }
       }
