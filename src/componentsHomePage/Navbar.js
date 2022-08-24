@@ -37,7 +37,8 @@ const Navbar = () => {
                           duration={500}>
                         KONTAKT
                     </Link>
-                    <LinkRouter className="nav-text" to="planningApp">
+                    <LinkRouter className="nav-text" to="planningApp"
+                                style={{textDecoration: "none", color: "#E58A20", marginRight: "3vw"}}>
                         ZAPLANUJ POSIŁKI!
                     </LinkRouter>
                 </div>
