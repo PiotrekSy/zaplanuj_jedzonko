@@ -37,7 +37,7 @@ const MobileNavbar = () => {
                               smooth={true}
                               duration={500}
                               onClick={showSidebar}>
-                            <p className="nav-text">HOME</p>
+                            <p className="nav-text">GŁÓWNA</p>
                         </Link>
                     </li>
 
@@ -58,7 +58,7 @@ const MobileNavbar = () => {
                               smooth={true}
                               duration={500}
                               onClick={showSidebar}>
-                            <p className="nav-text">O MNIE</p>
+                            <p className="nav-text">O NAS</p>
                         </Link>
                     </li>
                     <li className="nav-text">

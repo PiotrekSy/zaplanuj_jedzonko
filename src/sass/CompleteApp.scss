@@ -86,7 +86,6 @@ table {
 .homePage {
 
 
-
   @media only screen and (min-width: 999px) {
     //nawigacja:
     .navigation {
@@ -319,7 +318,6 @@ table {
         }
       }
     }
-
     //homepage =============================================
     //FirstSection
     .carouselWrapper {
@@ -651,18 +649,41 @@ table {
 
     //Contact
     .contact {
-      height: 100vh;
+      height: 90vh;
       width: 100vw;
 
-      .contactMedia {
-        height: 90%;
-        background-color: #22641a;
+      .contactMediaWrapper {
+        padding-top: 15vh;
+        height: 80%;
+        background-color: #c9c9cc;
       }
 
       .contactFooter {
-        height: 10%;
+        height: 10vh;
         width: 100vw;
-        background-color: #5b252b;
+        background-color: #232324;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .author {
+          margin: 0.5vh;
+          display: flex;
+          flex-direction: row;
+
+          .authorWhite {
+            color: white;
+          }
+          .authorOrange {
+
+            font-weight: bold;
+            color: #c78a2f;
+
+          }
+
+        }
       }
     }
 

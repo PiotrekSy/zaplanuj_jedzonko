@@ -3,8 +3,14 @@ import React from "react";
 const ContactFooter = () => {
     return (
         <div className="contactFooter">
-            <div className="footerLogo"/>
-            <p>CodersLab</p>
+            <div className="author">
+                <div className="authorWhite">ProjektStrony:</div>
+                <div className="authorOrange">CodersLab</div>
+            </div>
+            <div className="author">
+                <div className="authorWhite">Wykonał:</div>
+                <div className="authorOrange">PiotrekSy</div>
+            </div>
         </div>
     )
 }
