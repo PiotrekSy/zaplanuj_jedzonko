@@ -1,11 +1,12 @@
 import React from "react";
 
 const AboutPhoto3 = () => {
-    return (<>
+    return (
+        <>
             <div className="aboutPhoto photo3"/>
             <div className="aboutName">Natasha Romanova</div>
             <div className="aboutText">
-                <p>dietetyk, kucharka, szpieg, zabójca</p>
+                <p>dietetyk, kucharka, szpieg, trucicielka</p>
             </div>
         </>
     )

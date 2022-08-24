@@ -82,9 +82,8 @@ table {
 @import url('https://fonts.googleapis.com/css2?family=Charmonman&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
-//zachowanie WYŁĄCZNIE NA STRONCE !!!!!!!!!!!
 .homePage {
-
+  //zachowanie WYŁĄCZNIE NA STRONCE !!!!!!!!!!!
 
   @media only screen and (min-width: 999px) {
     //nawigacja:
@@ -452,7 +451,7 @@ table {
       height: 275vh;
       width: 100vw;
       background: url("./BCGR.jpg") no-repeat top left fixed;
-      background-size: clamp(500px, 100vh, 100vh);
+      background-size: clamp(500px, 100vw, 100vw);
 
       .benefitsBlur {
         height: 100%;
@@ -503,7 +502,7 @@ table {
         align-items: center;
         flex-direction: column;
         width: 100vw;
-        height: 35vh;
+        height: 36vh;
         background: #232324;
 
         .benefitsContactText {
@@ -603,7 +602,7 @@ table {
       }
 
       .photo2 {
-        //height: 100vh;
+
         max-width: 500px;
         width: 100vw;
         background: url("cook2.jpg");
@@ -611,7 +610,7 @@ table {
       }
 
       .photo3 {
-        //height: 100vh;
+
         width: 100vw;
         max-width: 500px;
         background: url("cook3.jpg");
