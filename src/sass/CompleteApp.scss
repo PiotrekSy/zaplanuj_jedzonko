@@ -458,7 +458,7 @@ table {
       height: 275vh;
       width: 100vw;
       background: url("./BCGR.jpg") no-repeat top left fixed;
-      background-size: clamp(500px, 100vw, 100vw);
+      background-size: clamp(500px, 100vh, 100vh);
 
       .benefitsBlur {
         height: 100%;
