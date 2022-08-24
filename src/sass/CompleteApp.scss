@@ -46,6 +46,7 @@ time, mark, audio, video {
   border: 0;
   font: inherit;
   vertical-align: baseline;
+
 }
 
 /* HTML5 display-role reset for older browsers */
@@ -60,6 +61,18 @@ input:focus {
 }
 
 body {
+  -ms-overflow-style: none; /* for Internet Explorer, Edge */
+  scrollbar-width: none; /* for Firefox */
+  overflow-y: scroll;
+}
+
+body::-webkit-scrollbar {
+  display: none; /* for Chrome, Safari, and Opera */
+}
+
+
+body {
+
   line-height: 1;
   font-family: 'Open Sans', sans-serif;
 
@@ -87,9 +100,9 @@ table {
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 .homePage {
-  //zachowanie WYŁĄCZNIE NA STRONCE !!!!!!!!!!!
+  //zachowanie WYŁĄCZNIE W MOBILCE !!!!!!!!!!!
 
-  @media only screen and (min-width: 999px) {
+  @media only screen and (max-width: 999px) {
     //nawigacja:
     .navigation {
       display: flex;
@@ -101,14 +114,12 @@ table {
     .mobileNavigation {
       display: none;
     }
-  }
 
-  // zachowanie W MOBILCE TYLKO!!!!!!!!!!!!!!!
-  @media only screen and (max-width: 999px) {
     //nawigacje dla apki i stronki:
     .navigation {
       display: none;
     }
+
     .mobileAppNavigation,
     .mobileNavigation {
       display: flex;
@@ -285,9 +296,9 @@ table {
       }
 
     }
-    //headers
-    .header,
-    .appHeader {
+
+    //header
+    .header {
       position: fixed;
       display: flex;
       flex-direction: row;
@@ -301,6 +312,7 @@ table {
         font-family: 'Charmonman', cursive;
         display: flex;
         flex-direction: row;
+        cursor: pointer;
 
         .zaplanuj {
           margin-left: 5vw;
@@ -318,6 +330,7 @@ table {
         }
       }
     }
+
     //homepage =============================================
     //FirstSection
     .carouselWrapper {
@@ -428,6 +441,7 @@ table {
         }
       }
     }
+
     //Button to top:
     .buttonToTop {
       z-index: 10;
@@ -452,12 +466,13 @@ table {
 
       }
     }
+
     //Benefits
     .benefits {
       height: 275vh;
       width: 100vw;
-      background: url("./BCGR.jpg") no-repeat top left fixed;
-      background-size: clamp(500px, 100vh, 100vh);
+      background: url("./BCGR.jpg") no-repeat top center fixed;
+      background-size: clamp(1500px, 150vh, 150vh);
 
       .benefitsBlur {
         height: 100%;
@@ -584,6 +599,7 @@ table {
         }
       }
     }
+
     //About
     .about {
       height: 300vh;
@@ -649,6 +665,7 @@ table {
         }
       }
     }
+
     //Contact
     .contact {
       height: 90vh;
@@ -747,9 +764,518 @@ table {
         }
       }
     }
+  }
+
+  // zachowanie WYŁĄCZNIE NA STRONIE!!!!!!!!!!!!!!
+  @media only screen and (min-width: 1000px) {
+
+    //homepage =============================================
+    .navigation {
+      height: 10vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .navButtons {
+        display: flex;
+        height: 10vh;
+        width: 100%;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+        .navMenuItems {
+          height: 10vh;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-end;
+          cursor: pointer;
+
+          .nav-text {
+            color: white;
+            font-size: 0.9rem;
+            height: 10vh;
+            width: 12vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .mobileAppNavigation,
+    .mobileNavigation {
+      display: none;
+    }
+
+    .nav-menu-items a:hover, .nav-menu-items, .navbar-toggle,
+    .nav-menu.active {
+      display: none;
+    }
+
+    //header
+    .header {
+      position: fixed;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 10vh;
+      width: 100vw;
+      background-color: rgb(35, 35, 35);
+
+      .logo {
+        font-family: 'Charmonman', cursive;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        .zaplanuj {
+          margin-left: 3vw;
+          color: white;
+          font-size: clamp(3vh, 3vw, 3vh);
+        }
+
+        .space {
+          width: 1vw;
+        }
+
+        .jedzonko {
+          font-size: clamp(3vh, 3vw, 3vh);
+          color: #E58A20;
+        }
+      }
+    }
 
 
-    //APKA==================================================
+    //FirstSection
+    .carouselWrapper {
+      height: 100vh;
+      width: 100%;
+      background-image: url("pexels-foodie-factor-539451.jpg");
+      background-size: cover;
+
+      ::-webkit-scrollbar {
+        height: 0;
+        width: 0;
+      }
+
+      .carouselLeftButton {
+        display: none;
+      }
+
+      .carouselRightButton {
+        display: none;
+      }
+
+      .carousel {
+        top: 10vh;
+        width: 100%;
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        overflow-style: unset;
+
+        .carouselItem {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-top: 10vh;
+          height: 65vh;
+          min-width: 100vw;
+          object-fit: cover;
+          scroll-snap-align: start;
+          text-align: center;
+
+          .carouselTitle {
+            text-align: center;
+            font-weight: bolder;
+            color: #fdfdfe;
+            font-size: 1.5rem;
+            width: 80vw;
+            margin-bottom: 5vh;
+            text-shadow: black 2px 2px 2px;
+          }
+
+          .carouselText {
+            width: 80vw;
+            font-weight: bold;
+            color: #fdfdfe;
+            text-shadow: black 2px 2px 1px;
+          }
+        }
+      }
+
+      .newsletter {
+        height: 25vh;
+        width: 100vw;
+        background-color: #232324;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+
+        .newsletterText {
+          color: white;
+          font-size: 0.9rem;
+          align-self: center;
+          justify-self: center;
+          width: 80vw;
+        }
+
+        .newsletterInputWrapper {
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          align-self: center;
+          width: 35vw;
+          margin-top: 3vh;
+
+          .newsletterInputForm {
+            width: 80vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            .newsletterInput {
+              color: white;
+              background-color: #151414;
+              border: none;
+              width: 100%;
+              height: 5vh;
+            }
+
+            .newsletterButton {
+              width: 100%;
+              background: #c58930;
+              height: 5vh;
+              border: 1px solid #f9ad3b;
+            }
+          }
+        }
+      }
+    }
+    //Benefits
+    .benefits {
+      height: 275vh;
+      width: 100vw;
+      background: url("./BCGR.jpg") no-repeat top center fixed;
+      background-size: 150%;
+
+      .benefitsBlur {
+        height: 100%;
+        z-index: 5;
+        background: rgba(0, 0, 0, 0.46)
+      }
+
+      .threeBenefits {
+        padding-top: 15vh;
+        padding-bottom: 15vh;
+        height: 210vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .benefitsItem {
+          height: 70vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 80vw;
+          text-align: center;
+
+
+          .carouselTitle {
+            font-size: 2.2rem;
+            font-weight: 1000;
+            color: white;
+            text-shadow: black 2px 2px;
+            padding: 5vh;
+            line-height: 3rem;
+          }
+
+          .carouselText {
+            font-size: 1.5rem;
+            font-weight: 400;
+            color: white;
+            text-shadow: black 2px 2px;
+            line-height: 1.6rem;
+          }
+        }
+      }
+
+      .benefitsContactWrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+        height: 36vh;
+        background: #232324;
+
+        .benefitsContactText {
+          margin-top: 1.5vh;
+          text-align: center;
+          font-size: 1rem;
+          width: 90vw;
+          color: white;
+          text-shadow: black 2px 2px;
+        }
+
+        .benefitsContactItem {
+          width: 40vw;
+          color: white;
+          display: flex;
+          flex-direction: column;
+
+          .benefitsContactInputWrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+
+            .benefitsLabels {
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+              justify-content: center;
+              align-items: center;
+
+
+              .benefitsContactLabel {
+                text-align: center;
+                margin-top: 2.5vh;
+                width: 90%;
+                height: 5vh;
+                font-size: 1rem;
+
+                .benefitInput {
+                  margin-top: 1vh;
+                  text-align: center;
+                  border: none;
+                  width: 100%;
+                  height: 4vh;
+                  color: white;
+                  background-color: #151414;
+                }
+              }
+            }
+
+            .benefitsContactSubmitButton {
+              width: 20vw;
+              align-self: center;
+            }
+          }
+
+          .newsletterButton {
+            width: 100%;
+            background: #c58930;
+            height: 5vh;
+            border: 1px solid rgba(249, 173, 59, 0.84);
+          }
+        }
+
+        .benefitsContactSubmitButton {
+          margin-top: 5vh;
+          width: 100%;
+          background: #c58930;
+          height: 5vh;
+          border: 1px solid #f9ad3b;
+        }
+      }
+    }
+
+    //About
+    .about {
+      height: 300vh;
+      width: 100%;
+      background-color: #232324;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .aboutPhoto {
+        justify-self: center;
+        height: 95vh;
+      }
+
+      .photo1 {
+        justify-self: center;
+        max-width: 500px;
+        width: 100vw;
+        background: url("cook1.jpg") no-repeat top;
+        background-size: cover;
+
+      }
+
+      .photo2 {
+
+        max-width: 500px;
+        width: 100vw;
+        background: url("cook2.jpg");
+        background-size: cover;
+      }
+
+      .photo3 {
+
+        width: 100vw;
+        max-width: 500px;
+        background: url("cook3.jpg");
+        background-size: cover;
+      }
+
+      .aboutName {
+        margin: 3vw;
+        height: 5vh;
+        color: white;
+        font-weight: bold;
+
+      }
+
+      .aboutText {
+        line-height: 1rem;
+        text-align: center;
+        margin-bottom: 5vw;
+        height: 5vh;
+        font-size: 0.7rem;
+        background-color: #232324;
+        display: flex;
+
+        p {
+          width: 80vw;
+          height: 5vh;
+          color: white;
+          justify-self: center;
+          align-self: center;
+        }
+      }
+    }
+
+    //Contact
+    .contact {
+      height: 90vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #c9c9cc;
+
+      .contactMediaWrapper {
+        padding-top: 15vh;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .contactInformation {
+          p {
+            align-self: center;
+            width: 90vw;
+            font-weight: 1000;
+            text-align: center;
+            line-height: 1.1rem;
+          }
+        }
+
+        .contactTitle {
+          padding-top: 5vh;
+          font-size: 1.2rem;
+          font-weight: bold;
+          text-align: center;
+        }
+
+        .contactIcons {
+          width: 90vw;
+          margin-top: 5vh;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          align-items: center;
+
+          .contactIcon {
+            height: 8vh;
+            width: 8vh;
+          }
+
+          .icon1 {
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url("Black-icon-facebook-logo-PNG.png");
+          }
+
+          .icon2 {
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-image: url("linkedin_black_logo_icon_147114.png");
+          }
+
+          .icon3 {
+            background-size: contain;
+            background-image: url("github-logo.png");
+            background-repeat: no-repeat;
+          }
+        }
+      }
+
+      .contactFooter {
+        height: 10vh;
+        width: 100vw;
+        background-color: #232324;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .author {
+          margin: 0.5vh;
+          display: flex;
+          flex-direction: row;
+          font-size: 0.8rem;
+
+          .authorWhite {
+            color: white;
+          }
+
+          .space {
+            width: 2vw;
+          }
+
+          .authorOrange {
+            font-weight: bold;
+            color: #c78a2f;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+//APKA==================================================
+
+.planningApp {
+  @media only screen and (max-width: 999px) {
+    .planningAppBackground {
+      background-color: #a69494;
+      height: 100vh;
+      width: 100vw;
+    }
+  }
+  @media only screen and (max-width: 999px) {
     .planningAppBackground {
       background-color: #a69494;
       height: 100vh;
@@ -757,4 +1283,7 @@ table {
     }
   }
 }
+
+
+
 

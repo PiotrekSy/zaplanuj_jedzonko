@@ -1,5 +1,4 @@
-import React from "react";
-import {useState} from "react";
+import React, {useState} from "react";
 import {Link} from 'react-scroll'
 import {Link as LinkRouter} from "react-router-dom";
 

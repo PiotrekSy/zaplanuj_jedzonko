@@ -14,19 +14,19 @@ const ContactMedia = () => {
                     style={{color: "#c78a2f"}}>PiotrekSy.</p></p>
                 <br/>
                 <p>Zachęcam do kontaktu poprzez <a href="https://www.linkedin.com/in/piotr-syjud-230451243/"
-                                                   target="_blank" style={{textDecoration: "none"}}><p
+                                                   target="_blank" rel="noreferrer" style={{textDecoration: "none"}}><p
                     style={{color: "#c78a2f"}}>LinkedIn:</p></a>
                 </p>
             </div>
             <div className="contactTitle">Skontaktuj się ze mną:</div>
             <div className="contactIcons">
-                <a href="https://www.facebook.com/piotr.syjud.1" target="_blank">
+                <a href="https://www.facebook.com/piotr.syjud.1" target="_blank" rel="noreferrer">
                     <div className="contactIcon icon1"/>
                 </a>
-                <a href="https://www.linkedin.com/in/piotr-syjud-230451243/" target="_blank">
+                <a href="https://www.linkedin.com/in/piotr-syjud-230451243/" target="_blank" rel="noreferrer">
                     <div className="contactIcon icon2"/>
                 </a>
-                <a href="https://github.com/PiotrekSy" target="_blank">
+                <a href="https://github.com/PiotrekSy" target="_blank" rel="noreferrer">
                     <div className="contactIcon icon3"/>
                 </a>
             </div>

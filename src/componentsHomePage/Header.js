@@ -1,16 +1,21 @@
 import Navbar from "./Navbar";
 import MobileNavbar from "./MobileNavbar";
 import React from "react";
+import {Link} from 'react-scroll'
 
 const Header = () => {
     return (
         <div className="header">
-            <div className="logo">
-                <div className="zaplanuj">Zaplanuj </div>
+            <Link className="logo"
+                  to="carousel"
+                  spy={true}
+                  smooth={true}
+                  duration={500}>
+                <div className="zaplanuj">Zaplanuj</div>
                 <div className="space"></div>
                 <div className="jedzonko"> Jedzonko</div>
-            </div>
-            <Navbar/>
+            </Link>
+            <Navbar className="navigation"/>
             <MobileNavbar/>
         </div>
     )

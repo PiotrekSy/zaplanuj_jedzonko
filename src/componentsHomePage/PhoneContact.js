@@ -48,7 +48,7 @@ const PhoneContact = () => {
                         <div className="hourValidation"></div>
                     </div>
                     <button type="submit" className="benefitsContactSubmitButton">Zadzwońcie do
-                        mnie{hour !== "" ? ` po ${hour}` : `!`}</button>
+                        mnie{hour !== "" ? ` po ${hour} !` : `!`}</button>
                 </form>
             </div>
         </div>)

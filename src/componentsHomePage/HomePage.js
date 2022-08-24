@@ -11,7 +11,7 @@ const HomePage = () => {
         <div className="homePage">
             <Header className="header"/>
             <FirstSection path='/carousel' className="carousel"/>
-            <Benefits path="/isItWorth" title = "isItWorth" className="benefits"/>
+            <Benefits path="/isItWorth" title="isItWorth" className="benefits"/>
             <About path="/about" className="about"/>
             <Contact path="/contact" className="contact"/>
             {/*<ButtonToTop/>*/}
