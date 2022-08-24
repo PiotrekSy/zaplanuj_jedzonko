@@ -5,7 +5,7 @@ const AboutPhoto2 = () => {
             <div className="aboutPhoto photo2"/>
             <div className="aboutName">Dr. Bruce Banner</div>
             <div className="aboutText">
-                <p>dietetyk, kucharz, bywa nerwowy i lepiej mu wtedy zejść z drogi.</p>
+                <p>dietetyk, kucharz, bywa nerwowy i woli gotować w samotności</p>
             </div>
         </>
     )
