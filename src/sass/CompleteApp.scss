@@ -114,8 +114,6 @@ table {
       align-items: center;
       height: clamp(10vh, 10vh, 10vh);
       width: clamp(10vh, 10vh, 10vh);
-      z-index: 100;
-
 
       .mobileMenuIcon {
         position: relative;
@@ -125,7 +123,7 @@ table {
         justify-content: center;
         height: 100%;
         width: 100%;
-        z-index: 2;
+
 
         .topBar {
           position: relative;
@@ -159,6 +157,7 @@ table {
         color: #000000;
         text-decoration: none;
         font-size: 1rem;
+        text-shadow: #503b14 1px 1px 2px;
       }
 
       .menu__btn {
@@ -166,12 +165,10 @@ table {
         align-self: center;
         width: 100%;
         height: 100%;
-        z-index: 1;
-        //background: url("../menu_FILL0_wght400_GRAD0_opsz48.svg") no-repeat center;
       }
 
       .nav-menu {
-        background-color: rgba(147, 144, 144, 0.96);
+        background-color: rgba(5, 5, 5, 0.96);
         width: 100vw;
         font-weight: bold;
         height: 100vh;
@@ -189,7 +186,6 @@ table {
           left: 80vw;
           width: 100%;
           height: 100%;
-          z-index: 2;
 
           .mobileMenuCloseIcon {
             position: absolute;
@@ -207,7 +203,7 @@ table {
               position: relative;
               width: 50%;
               height: 3px;
-              background-color: #000000;
+              background-color: #c78a2f;
               box-shadow: rgba(0, 0, 0, 0.27) 2px -2px 0.4px;
               transform: rotate(45deg);
             }
@@ -217,7 +213,7 @@ table {
               top: -3px;
               width: 50%;
               height: 3px;
-              background-color: #000000;
+              background-color: #c78a2f;
               box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 0.4px;
               transform: rotate(-45deg);
             }
@@ -238,8 +234,10 @@ table {
         justify-self: center;
         align-self: center;
         list-style: none;
+        font-weight: bold;
+        font-size: 1.6rem;
         width: 100vw;
-        height: 4rem;
+        height: 10vh;
       }
 
       .nav-text a {
@@ -323,7 +321,8 @@ table {
     .carouselWrapper {
       height: 100vh;
       width: 100%;
-      z-index: 1;
+      background-image: url("pexels-foodie-factor-539451.jpg");
+      background-size: cover;
 
       ::-webkit-scrollbar {
         height: 0;
@@ -340,14 +339,12 @@ table {
 
       .carousel {
         top: 10vh;
-        //height: 65%;
         width: 100%;
         display: flex;
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
         scroll-behavior: smooth;
         overflow-style: unset;
-        z-index: 0;
 
         .carouselItem {
           display: flex;
@@ -359,22 +356,22 @@ table {
           min-width: 100vw;
           object-fit: cover;
           scroll-snap-align: start;
-          z-index: -1;
           text-align: center;
 
           .carouselTitle {
             text-align: center;
-            color: #a60b0b;
+            font-weight: bold;
+            color: #fdfdfe;
             font-size: 1.5rem;
             width: 80vw;
             margin-bottom: 5vh;
-            z-index: 3;
+            text-shadow: black 2px 2px 2px;
           }
 
           .carouselText {
-            color: black;
             width: 80vw;
-            z-index: 3;
+            color: #fdfdfe;
+            text-shadow: black 2px 2px 2px;
           }
         }
       }
@@ -424,7 +421,6 @@ table {
             }
           }
         }
-
       }
     }
     //Button to top:
@@ -631,9 +627,11 @@ table {
       }
 
       .aboutText {
+        line-height: 1rem;
         text-align: center;
         margin-bottom: 5vw;
         height: 5vh;
+        font-size: 0.7rem;
         background-color: #232324;
         display: flex;
 
@@ -646,16 +644,69 @@ table {
         }
       }
     }
-
     //Contact
     .contact {
       height: 90vh;
       width: 100vw;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background-color: #c9c9cc;
 
       .contactMediaWrapper {
         padding-top: 15vh;
         height: 80%;
-        background-color: #c9c9cc;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .contactInformation {
+          p {
+            align-self: center;
+            width: 90vw;
+            font-weight: bold;
+            text-align: center;
+            text-shadow: black 1px 1px 2px;
+          }
+        }
+
+        .contactTitle {
+          padding-top: 5vh;
+          font-size: 1.2rem;
+          font-weight: bold;
+          text-align: center;
+          text-shadow: black 1px 1px 2px;
+        }
+
+        .contactIcons {
+          width: 90vw;
+          margin-top: 5vh;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          align-items: center;
+
+          .contactIcon {
+            height: 10vh;
+            width: 10vh;
+          }
+
+          .icon1 {
+            background-size: contain;
+            background-image: url("Black-icon-facebook-logo-PNG.png");
+          }
+
+          .icon2 {
+            background-size: contain;
+            background-image: url("linkedin_black_logo_icon_147114.png");
+          }
+
+          .icon3 {
+            background-size: contain;
+            background-image: url("github-logo.png");
+          }
+        }
       }
 
       .contactFooter {
@@ -672,17 +723,20 @@ table {
           margin: 0.5vh;
           display: flex;
           flex-direction: row;
+          font-size: 0.8rem;
 
           .authorWhite {
             color: white;
           }
-          .authorOrange {
 
-            font-weight: bold;
-            color: #c78a2f;
-
+          .space {
+            width: 2vw;
           }
 
+          .authorOrange {
+            font-weight: bold;
+            color: #c78a2f;
+          }
         }
       }
     }
