@@ -14,7 +14,7 @@ const Navbar = () => {
                           spy={true}
                           smooth={true}
                           duration={500}>
-                        HOME
+                        GŁÓWNA
                     </Link>
                     <Link className="nav-text"
                           to="benefits"
@@ -28,7 +28,7 @@ const Navbar = () => {
                           spy={true}
                           smooth={true}
                           duration={500}>
-                        O MNIE
+                        O NAS
                     </Link>
                     <Link className="nav-text"
                           to="contact"

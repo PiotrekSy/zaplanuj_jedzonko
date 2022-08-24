@@ -853,7 +853,6 @@ table {
       }
     }
 
-
     //FirstSection
     .carouselWrapper {
       height: 100vh;
@@ -1099,66 +1098,75 @@ table {
 
     //About
     .about {
-      height: 300vh;
-      width: 100%;
+      height: 100vh;
+      width: 100vw;
       background-color: #232324;
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       align-items: center;
 
-      .aboutPhoto {
-        justify-self: center;
-        height: 95vh;
-      }
-
-      .photo1 {
-        justify-self: center;
-        max-width: 500px;
-        width: 100vw;
-        background: url("cook1.jpg") no-repeat top;
-        background-size: cover;
-
-      }
-
-      .photo2 {
-
-        max-width: 500px;
-        width: 100vw;
-        background: url("cook2.jpg");
-        background-size: cover;
-      }
-
-      .photo3 {
-
-        width: 100vw;
-        max-width: 500px;
-        background: url("cook3.jpg");
-        background-size: cover;
-      }
-
-      .aboutName {
-        margin: 3vw;
-        height: 5vh;
-        color: white;
-        font-weight: bold;
-
-      }
-
-      .aboutText {
-        line-height: 1rem;
-        text-align: center;
-        margin-bottom: 5vw;
-        height: 5vh;
-        font-size: 0.7rem;
-        background-color: #232324;
+      .aboutPhotoWrapper {
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
 
-        p {
-          width: 80vw;
-          height: 5vh;
-          color: white;
+        .aboutPhoto {
           justify-self: center;
-          align-self: center;
+          height: 70vh;
+        }
+
+        .photo1 {
+          max-height: 50vh;
+          min-height: 50vh;
+          justify-self: center;
+          min-width: 25vw;
+          background: url("cook1.jpg") no-repeat top left;
+          background-size: cover;
+        }
+
+        .photo2 {
+          max-height: 50vh;
+          min-height: 50vh;
+          justify-self: center;
+          min-width: 25vw;
+          background: url("cook2.jpg") no-repeat top center;
+          background-size: cover;
+        }
+
+        .photo3 {
+          max-height: 50vh;
+          min-height: 50vh;
+          justify-self: center;
+          min-width: 25vw;
+          background: url("cook3.jpg") no-repeat top center;
+          background-size: cover;
+        }
+
+        .aboutName {
+          margin: 2vh;
+          width: 100%;
+          color: white;
+          font-weight: bold;
+          text-align: center;
+          font-size: 1.5rem;
+        }
+
+        .aboutText {
+          width: 70%;
+          line-height: 1rem;
+          text-align: center;
+          font-size: 1rem;
+          background-color: #232324;
+          display: flex;
+
+          p {
+            width: 100%;
+            height: 5vh;
+            color: white;
+            justify-self: center;
+            text-align: center
+          }
         }
       }
     }
@@ -1171,7 +1179,7 @@ table {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-color: #c9c9cc;
+      background-color: #ffffff;
 
       .contactMediaWrapper {
         padding-top: 15vh;
@@ -1181,25 +1189,28 @@ table {
         align-items: center;
 
         .contactInformation {
+          font-size: 1.2rem;
+
           p {
             align-self: center;
             width: 90vw;
             font-weight: 1000;
             text-align: center;
-            line-height: 1.1rem;
+            line-height: 1.5rem;
           }
         }
 
         .contactTitle {
           padding-top: 5vh;
-          font-size: 1.2rem;
+          font-size: 1.5rem;
           font-weight: bold;
           text-align: center;
+
         }
 
         .contactIcons {
-          width: 90vw;
-          margin-top: 5vh;
+          width: 40vw;
+          margin-top: 10vh;
           display: flex;
           flex-direction: row;
           justify-content: space-evenly;

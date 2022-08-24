@@ -1,13 +1,14 @@
 import React from "react";
 
 const AboutPhoto1 = () => {
-    return (<>
+    return (
+        <div className="aboutPhotoWrapper">
             <div className="aboutPhoto photo1"/>
             <div className="aboutName">Tony Stark</div>
             <div className="aboutText">
-                <p>dietetyk, kucharz, posiadacz fajnej zbroi, filantrop, playboy, miliarder</p>
+                <p>kucharz hobbysta, posiadacz fajnej zbroi, filantrop, playboy, miliarder, pomysłodawca aplikacji</p>
             </div>
-        </>
+        </div>
     )
 }
 
