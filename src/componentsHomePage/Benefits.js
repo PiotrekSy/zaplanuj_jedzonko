@@ -5,8 +5,10 @@ import PhoneContact from "./PhoneContact"
 const Benefits = () => {
     return (
         <div className="benefits">
+            <div className="benefitsBlur">
             <ThreeBenefits/>
             <PhoneContact/>
+            </div>
         </div>
     )
 }

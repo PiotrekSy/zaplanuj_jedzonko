@@ -26,7 +26,7 @@
 /*   Tło aplikacji jest załączone w tej karcie.*/
 
 /*## OBRAZY*/
-/*   [Cooking Photos](https://www.pexels.com/search/cooking/) - obrazy oraz zdjęcia do wykorzystania na Landing Page. */
+/*   [Cooking Photos]() - obrazy oraz zdjęcia do wykorzystania na Landing Page. */
 //reset:
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -372,7 +372,6 @@ table {
 
         .carouselText {
           color: black;
-
           width: 80vw;
           z-index: 3;
         }
@@ -413,11 +412,13 @@ table {
 
           .newsletterInput {
             width: 100%;
+            height: 4.5vh;
           }
 
           .newsletterButton {
             width: 100%;
             background: #c58930;
+            height: 5vh;
             border: 1px solid #f9ad3b;
           }
         }
@@ -425,30 +426,78 @@ table {
 
     }
   }
+  //Button to top:
+  .buttonToTop {
+    z-index: 10;
+    position: fixed;
+    bottom: 2vh;
+    right: 2vh;
+    height: 10vh;
+    width: 10vh;
 
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(195, 136, 49, 0.83);
+    border: 3px solid rgba(128, 81, 31, 0.82);
+
+    .expandLessIcon {
+      height: 100%;
+      width: 100%;
+      background: url("expand_less_FILL0_wght700_GRAD0_opsz48.png") no-repeat center;
+      background-size: 50%;
+
+    }
+  }
   //Benefits
   .benefits {
-    height: 180vh;
+    .benefitsBlur {
+      height: 100%;
+      z-index: 5;
+      background: rgba(0, 0, 0, 0.46)
+    }
+    height: 335vh;
     width: 100vw;
-
+    background: url("./BCGR.jpg") no-repeat top left fixed;
+    background-size: clamp(500px, 100vw, 100vw);
 
     .threeBenefits {
-      padding-top: 15vh;
-      height: 150vh;
+      height: 300vh;
       width: 100vw;
-      background-color: #ffffff;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
 
       .benefitsItem {
-        height: 50vh;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 80vw;
+
+        .carouselTitle {
+          font-size: 3rem;
+          font-weight: 1000;
+          color: white;
+          text-shadow: black 2px 2px;
+          padding: 5vh
+        }
+
+        .carouselText {
+          font-size: 1rem;
+          font-weight: 1000;
+          color: white;
+          text-shadow: black 2px 2px;
+        }
       }
-
-
     }
 
     .benefitsContactWrapper {
-      height: 25vh;
-      width: 190vw;
-      background-color: #2d4f49;
+      height: 35vh;
+      width: 100vw;
+      background-color: #232325;
     }
   }
 
