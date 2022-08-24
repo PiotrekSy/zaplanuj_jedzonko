@@ -83,336 +83,490 @@ table {
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 //zachowanie WYŁĄCZNIE NA STRONCE !!!!!!!!!!!
-
-@media only screen and (min-width: 999px) {
-  //nawigacja:
-  .navigation {
-    display: flex;
-    flex-direction: row;
-    background-color: #c78a2f;
-    z-index: 10;
-  }
-  .mobileAppNavigation,
-  .mobileNavigation {
-    display: none;
-  }
-}
-
-// zachowanie W MOBILCE TYLKO!!!!!!!!!!!!!!!
-@media only screen and (max-width: 999px) {
-
-  //nawigacje dla apki i stronki:
-  .navigation {
-    display: none;
-  }
-  .mobileAppNavigation,
-  .mobileNavigation {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: clamp(10vh, 10vh, 10vh);
-    width: clamp(10vh, 10vh, 10vh);
-    z-index: 100;
+.homePage {
 
 
-    .mobileMenuIcon {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      height: 100%;
-      width: 100%;
-      z-index: 2;
 
-      .topBar {
-        position: relative;
-        width: 50%;
-        height: 3px;
-        background-color: #c78a2f;
-        top: -10%;
-        box-shadow: rgba(0, 0, 0, 0.22) 2px 2px 0.4px;
-      }
-
-      .middleBar {
-        position: relative;
-        width: 50%;
-        height: 3px;
-        background-color: #c78a2f;
-        box-shadow: rgba(0, 0, 0, 0.22) 2px 2px 0.4px;
-      }
-
-      .bottomBar {
-        position: relative;
-        width: 50%;
-        height: 3px;
-        background-color: #c78a2f;
-        top: 10%;
-        box-shadow: rgba(0, 0, 0, 0.22) 2px 2px 0.4px;
-      }
-
-    }
-
-    a {
-      color: #000000;
-      text-decoration: none;
-      font-size: 1rem;
-    }
-
-    .menu__btn {
-      position: relative;
-      align-self: center;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-      //background: url("../menu_FILL0_wght400_GRAD0_opsz48.svg") no-repeat center;
-    }
-
-    .nav-menu {
-      background-color: rgba(147, 144, 144, 0.96);
-      width: 100vw;
-      font-weight: bold;
-      height: 100vh;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      top: 0;
-      right: -100%;
-      transition: 0.2s;
-      z-index: 100;
-
-      .mobileMenuCloseButton {
-        top: 0;
-        left: 80vw;
-        width: 100%;
-        height: 100%;
-        z-index: 2;
-
-        .mobileMenuCloseIcon {
-          position: absolute;
-          top: 0;
-          right: 0;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: center;
-          height: 10vh;
-          width: 10vh;
-          z-index: 2;
-
-          .crossBarOne {
-            position: relative;
-            width: 50%;
-            height: 3px;
-            background-color: #000000;
-            box-shadow: rgba(0, 0, 0, 0.27) 2px -2px 0.4px;
-            transform: rotate(45deg);
-          }
-
-          .crossBarTwo {
-            position: relative;
-            top: -3px;
-            width: 50%;
-            height: 3px;
-            background-color: #000000;
-            box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 0.4px;
-            transform: rotate(-45deg);
-          }
-        }
-      }
-    }
-
-    .nav-menu.active {
-      right: 0;
-      transition: 0.25s;
-      z-index: 100;
-    }
-
-    .nav-text {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      justify-self: center;
-      align-self: center;
-      list-style: none;
-      width: 100vw;
-      height: 4rem;
-    }
-
-    .nav-text a {
-      font-size: clamp(1em, 1.2em, 1.4em);
-      text-decoration: none;
-      color: #80511f;
-      width: 100%;
-      height: 100%;
-      justify-self: center;
-      align-self: center;
-      display: flex;
-      align-items: center;
-    }
-
-    a {
-      display: flex;
-      justify-content: center;
-    }
-
-    .nav-menu-items a:hover {
-      background-color: rgba(122, 122, 122, 0.94);
-    }
-
-    .nav-menu-items {
-      justify-self: center;
-      align-self: center;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      width: 100vw;
-    }
-
-    .navbar-toggle {
-      background-color: #ffffff;
-      width: 100%;
-      height: 80px;
-      display: flex;
-      justify-self: center;
-      align-self: center;
-      justify-content: center;
-      align-items: center;
-    }
-
-  }
-  //headers
-  .header,
-  .appHeader {
-    position: fixed;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    height: clamp(10vh, 10vh, 10vh);
-    width: 100vw;
-    background-color: rgb(35, 35, 35);
-
-    .logo {
-      font-family: 'Charmonman', cursive;
+  @media only screen and (min-width: 999px) {
+    //nawigacja:
+    .navigation {
       display: flex;
       flex-direction: row;
-
-      .zaplanuj {
-        margin-left: 5vw;
-        color: white;
-        font-size: clamp(3vh, 4vw, 4.5vh);
-      }
-
-      .space {
-        width: 2vw;
-      }
-
-      .jedzonko {
-        font-size: clamp(3vh, 4vw, 4.5vh);
-        color: #E58A20;
-      }
+      background-color: #c78a2f;
+      z-index: 10;
+    }
+    .mobileAppNavigation,
+    .mobileNavigation {
+      display: none;
     }
   }
 
-  //homepage =============================================
-  //FirstSection
-  .carouselWrapper {
-    height: 100vh;
-    width: 100%;
-    z-index: 1;
+  // zachowanie W MOBILCE TYLKO!!!!!!!!!!!!!!!
+  @media only screen and (max-width: 999px) {
 
-    ::-webkit-scrollbar {
-      height: 0;
-      width: 0;
-    }
-
-    .carouselLeftButton {
+    //nawigacje dla apki i stronki:
+    .navigation {
       display: none;
     }
-
-    .carouselRightButton {
-      display: none;
-    }
-
-    .carousel {
-      top: 10vh;
-      //height: 65%;
-      width: 100%;
+    .mobileAppNavigation,
+    .mobileNavigation {
       display: flex;
-      overflow-x: scroll;
-      scroll-snap-type: x mandatory;
-      scroll-behavior: smooth;
-      overflow-style: unset;
-      z-index: 0;
+      justify-content: center;
+      align-items: center;
+      height: clamp(10vh, 10vh, 10vh);
+      width: clamp(10vh, 10vh, 10vh);
+      z-index: 100;
 
-      .carouselItem {
+
+      .mobileMenuIcon {
+        position: relative;
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: center;
-        margin-top: 10vh;
-        height: 65vh;
-        min-width: 100vw;
-        object-fit: cover;
-        scroll-snap-align: start;
-        z-index: -1;
-        text-align: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
 
-        .carouselTitle {
-          text-align: center;
-          color: #a60b0b;
-          font-size: 1.5rem;
-          width: 80vw;
-          margin-bottom: 5vh;
-          z-index: 3;
+        .topBar {
+          position: relative;
+          width: 50%;
+          height: 3px;
+          background-color: #c78a2f;
+          top: -10%;
+          box-shadow: rgba(0, 0, 0, 0.22) 2px 2px 0.4px;
         }
 
-        .carouselText {
-          color: black;
-          width: 80vw;
-          z-index: 3;
+        .middleBar {
+          position: relative;
+          width: 50%;
+          height: 3px;
+          background-color: #c78a2f;
+          box-shadow: rgba(0, 0, 0, 0.22) 2px 2px 0.4px;
+        }
+
+        .bottomBar {
+          position: relative;
+          width: 50%;
+          height: 3px;
+          background-color: #c78a2f;
+          top: 10%;
+          box-shadow: rgba(0, 0, 0, 0.22) 2px 2px 0.4px;
+        }
+
+      }
+
+      a {
+        color: #000000;
+        text-decoration: none;
+        font-size: 1rem;
+      }
+
+      .menu__btn {
+        position: relative;
+        align-self: center;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        //background: url("../menu_FILL0_wght400_GRAD0_opsz48.svg") no-repeat center;
+      }
+
+      .nav-menu {
+        background-color: rgba(147, 144, 144, 0.96);
+        width: 100vw;
+        font-weight: bold;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: absolute;
+        top: 0;
+        right: -100%;
+        transition: 0.2s;
+        z-index: 100;
+
+        .mobileMenuCloseButton {
+          top: 0;
+          left: 80vw;
+          width: 100%;
+          height: 100%;
+          z-index: 2;
+
+          .mobileMenuCloseIcon {
+            position: absolute;
+            top: 0;
+            right: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 10vh;
+            width: 10vh;
+            z-index: 2;
+
+            .crossBarOne {
+              position: relative;
+              width: 50%;
+              height: 3px;
+              background-color: #000000;
+              box-shadow: rgba(0, 0, 0, 0.27) 2px -2px 0.4px;
+              transform: rotate(45deg);
+            }
+
+            .crossBarTwo {
+              position: relative;
+              top: -3px;
+              width: 50%;
+              height: 3px;
+              background-color: #000000;
+              box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 0.4px;
+              transform: rotate(-45deg);
+            }
+          }
+        }
+      }
+
+      .nav-menu.active {
+        right: 0;
+        transition: 0.25s;
+        z-index: 100;
+      }
+
+      .nav-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+        align-self: center;
+        list-style: none;
+        width: 100vw;
+        height: 4rem;
+      }
+
+      .nav-text a {
+        font-size: clamp(1em, 1.2em, 1.4em);
+        text-decoration: none;
+        color: #80511f;
+        width: 100%;
+        height: 100%;
+        justify-self: center;
+        align-self: center;
+        display: flex;
+        align-items: center;
+      }
+
+      a {
+        display: flex;
+        justify-content: center;
+      }
+
+      .nav-menu-items a:hover {
+        background-color: rgba(122, 122, 122, 0.94);
+      }
+
+      .nav-menu-items {
+        justify-self: center;
+        align-self: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+      }
+
+      .navbar-toggle {
+        background-color: #ffffff;
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-self: center;
+        align-self: center;
+        justify-content: center;
+        align-items: center;
+      }
+
+    }
+    //headers
+    .header,
+    .appHeader {
+      position: fixed;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: clamp(10vh, 10vh, 10vh);
+      width: 100vw;
+      background-color: rgb(35, 35, 35);
+
+      .logo {
+        font-family: 'Charmonman', cursive;
+        display: flex;
+        flex-direction: row;
+
+        .zaplanuj {
+          margin-left: 5vw;
+          color: white;
+          font-size: clamp(3vh, 4vw, 4.5vh);
+        }
+
+        .space {
+          width: 2vw;
+        }
+
+        .jedzonko {
+          font-size: clamp(3vh, 4vw, 4.5vh);
+          color: #E58A20;
         }
       }
     }
 
-    .newsletter {
-      height: 25vh;
-      width: 100vw;
-      background-color: #232324;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      justify-content: center;
+    //homepage =============================================
+    //FirstSection
+    .carouselWrapper {
+      height: 100vh;
+      width: 100%;
+      z-index: 1;
 
-      .newsletterText {
-        color: white;
-        font-size: 0.8rem;
-        align-self: center;
-        justify-self: center;
-        width: 80vw;
+      ::-webkit-scrollbar {
+        height: 0;
+        width: 0;
       }
 
-      .newsletterInputWrapper {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
-        width: 100vw;
-        margin-top: 3vh;
+      .carouselLeftButton {
+        display: none;
+      }
 
-        .newsletterInputForm {
+      .carouselRightButton {
+        display: none;
+      }
+
+      .carousel {
+        top: 10vh;
+        //height: 65%;
+        width: 100%;
+        display: flex;
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scroll-behavior: smooth;
+        overflow-style: unset;
+        z-index: 0;
+
+        .carouselItem {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          margin-top: 10vh;
+          height: 65vh;
+          min-width: 100vw;
+          object-fit: cover;
+          scroll-snap-align: start;
+          z-index: -1;
+          text-align: center;
+
+          .carouselTitle {
+            text-align: center;
+            color: #a60b0b;
+            font-size: 1.5rem;
+            width: 80vw;
+            margin-bottom: 5vh;
+            z-index: 3;
+          }
+
+          .carouselText {
+            color: black;
+            width: 80vw;
+            z-index: 3;
+          }
+        }
+      }
+
+      .newsletter {
+        height: 25vh;
+        width: 100vw;
+        background-color: #232324;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+
+        .newsletterText {
+          color: white;
+          font-size: 0.8rem;
+          align-self: center;
+          justify-self: center;
           width: 80vw;
+        }
+
+        .newsletterInputWrapper {
           display: flex;
           flex-direction: row;
           justify-content: center;
           align-items: center;
+          width: 100vw;
+          margin-top: 3vh;
 
-          .newsletterInput {
+          .newsletterInputForm {
+            width: 80vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+
+            .newsletterInput {
+              width: 100%;
+              height: 4.5vh;
+            }
+
+            .newsletterButton {
+              width: 100%;
+              background: #c58930;
+              height: 5vh;
+              border: 1px solid #f9ad3b;
+            }
+          }
+        }
+
+      }
+    }
+    //Button to top:
+    .buttonToTop {
+      z-index: 10;
+      position: fixed;
+      bottom: 2vh;
+      right: 2vh;
+      height: 10vh;
+      width: 10vh;
+
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: rgba(195, 136, 49, 0.83);
+      border: 3px solid rgba(128, 81, 31, 0.82);
+
+      .expandLessIcon {
+        height: 100%;
+        width: 100%;
+        background: url("expand_less_FILL0_wght700_GRAD0_opsz48.png") no-repeat center;
+        background-size: 50%;
+
+      }
+    }
+    //Benefits
+    .benefits {
+
+      height: 275vh;
+      width: 100vw;
+      background: url("./BCGR.jpg") no-repeat top left fixed;
+      background-size: clamp(500px, 100vw, 100vw);
+
+      .benefitsBlur {
+        height: 100%;
+        z-index: 5;
+        background: rgba(0, 0, 0, 0.46)
+      }
+
+      .threeBenefits {
+        padding-top: 15vh;
+        padding-bottom: 15vh;
+        height: 210vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+
+        .benefitsItem {
+          height: 70vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 80vw;
+          text-align: center;
+
+
+          .carouselTitle {
+            font-size: 1.6rem;
+            font-weight: 1000;
+            color: white;
+            text-shadow: black 2px 2px;
+            padding: 5vh;
+            line-height: 1.8rem;
+          }
+
+          .carouselText {
+            font-size: 1rem;
+            font-weight: 400;
+            color: white;
+            text-shadow: black 2px 2px;
+            line-height: 1.2rem;
+          }
+        }
+      }
+
+      .benefitsContactWrapper {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100vw;
+        height: 35vh;
+        background: #232324;
+
+        .benefitsContactText {
+          margin-top: 3vh;
+          text-align: center;
+          font-size: 0.8rem;
+          width: 90vw;
+          color: white;
+          text-shadow: black 2px 2px;
+        }
+
+        .benefitsContactItem {
+          width: 95vw;
+          color: white;
+          text-shadow: black 2px 2px;
+          display: flex;
+          flex-direction: column;
+
+          .benefitsContactInputWrapper {
             width: 100%;
-            height: 4.5vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-evenly;
+
+            .benefitsLabels {
+              display: flex;
+              flex-direction: column;
+              width: 100%;
+              justify-content: center;
+              align-items: center;
+
+
+              .benefitsContactLabel {
+                text-align: center;
+                margin-top: 2vh;
+                width: 90%;
+                height: 4.5vh;
+                font-size: 0.7rem;
+
+                .benefitInput {
+                  text-align: center;
+                  margin-top: 1vh;
+                  border: none;
+                  background: #232325;
+                  width: 100%;
+                  height: 3vh;
+                  color: white;
+                }
+              }
+            }
+
+            .benefitsContactSubmitButton {
+              width: 90vw;
+              align-self: center;
+            }
           }
 
           .newsletterButton {
@@ -422,212 +576,106 @@ table {
             border: 1px solid #f9ad3b;
           }
         }
-      }
 
-    }
-  }
-  //Button to top:
-  .buttonToTop {
-    z-index: 10;
-    position: fixed;
-    bottom: 2vh;
-    right: 2vh;
-    height: 10vh;
-    width: 10vh;
-
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(195, 136, 49, 0.83);
-    border: 3px solid rgba(128, 81, 31, 0.82);
-
-    .expandLessIcon {
-      height: 100%;
-      width: 100%;
-      background: url("expand_less_FILL0_wght700_GRAD0_opsz48.png") no-repeat center;
-      background-size: 50%;
-
-    }
-  }
-  //Benefits
-  .benefits {
-
-    height: 275vh;
-    width: 100vw;
-    background: url("./BCGR.jpg") no-repeat top left fixed;
-    background-size: clamp(500px, 100vw, 100vw);
-
-    .benefitsBlur {
-      height: 100%;
-      z-index: 5;
-      background: rgba(0, 0, 0, 0.46)
-    }
-
-    .threeBenefits {
-      padding-top: 15vh;
-      padding-bottom: 15vh;
-      height: 210vh;
-      width: 100vw;
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-
-      .benefitsItem {
-        height: 70vh;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        width: 80vw;
-        text-align: center;
-
-
-        .carouselTitle {
-          font-size: 1.6rem;
-          font-weight: 1000;
-          color: white;
-          text-shadow: black 2px 2px;
-          padding: 5vh;
-          line-height: 1.8rem;
-        }
-
-        .carouselText {
-          font-size: 1rem;
-          font-weight: 400;
-          color: white;
-          text-shadow: black 2px 2px;
-          line-height: 1.2rem;
-        }
-      }
-    }
-
-    .benefitsContactWrapper {
-      display: flex;
-      align-items: center;
-      flex-direction: column;
-      width: 100vw;
-      height: 35vh;
-      background: #232324;
-
-      .benefitsContactText {
-        margin-top: 3vh;
-        text-align: center;
-        font-size: 0.8rem;
-        width: 90vw;
-        color: white;
-        text-shadow: black 2px 2px;
-      }
-
-      .benefitsContactItem {
-        width: 95vw;
-        color: white;
-        text-shadow: black 2px 2px;
-        display: flex;
-        flex-direction: column;
-
-        .benefitsContactInputWrapper {
-          width: 100%;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          justify-content: space-evenly;
-
-          .benefitsLabels {
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-
-
-            .benefitsContactLabel {
-              text-align: center;
-              margin-top: 2vh;
-              width: 90%;
-              height: 4.5vh;
-              font-size: 0.7rem;
-
-              .benefitInput {
-                text-align: center;
-                margin-top: 1vh;
-                border: none;
-                background: #232325;
-                width: 100%;
-                height: 3vh;
-                color: white;
-              }
-            }
-          }
-
-          .benefitsContactSubmitButton {
-            width: 90vw;
-            align-self: center;
-          }
-        }
-
-        .newsletterButton {
+        .benefitsContactSubmitButton {
+          margin-top: 5vh;
           width: 100%;
           background: #c58930;
           height: 5vh;
           border: 1px solid #f9ad3b;
         }
       }
+    }
+    //About
+    .about {
+      height: 300vh;
+      width: 100%;
+      background-color: #232324;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
 
-      .benefitsContactSubmitButton {
-        margin-top: 5vh;
-        width: 100%;
-        background: #c58930;
+      .aboutPhoto {
+        justify-self: center;
+        height: 95vh;
+      }
+
+      .photo1 {
+        justify-self: center;
+        max-width: 500px;
+        width: 100vw;
+        background: url("cook1.jpg") no-repeat top;
+        background-size: cover;
+
+      }
+
+      .photo2 {
+        //height: 100vh;
+        max-width: 500px;
+        width: 100vw;
+        background: url("cook2.jpg");
+        background-size: cover;
+      }
+
+      .photo3 {
+        //height: 100vh;
+        width: 100vw;
+        max-width: 500px;
+        background: url("cook3.jpg");
+        background-size: cover;
+      }
+
+      .aboutName {
+        margin: 3vw;
         height: 5vh;
-        border: 1px solid #f9ad3b;
+        color: white;
+        font-weight: bold;
+
+      }
+
+      .aboutText {
+        text-align: center;
+        margin-bottom: 5vw;
+        height: 5vh;
+        background-color: #232324;
+        display: flex;
+
+        p {
+          width: 80vw;
+          height: 5vh;
+          color: white;
+          justify-self: center;
+          align-self: center;
+        }
       }
     }
-  }
-  //About
-  .about {
-    height: 100vh;
-    width: 100vw;
 
-
-    .aboutPhoto {
-      height: 75%;
-      background-color: #46256c;
-    }
-
-    .aboutText {
-      height: 25%;
+    //Contact
+    .contact {
+      height: 100vh;
       width: 100vw;
-      background-color: #c583d2;
+
+      .contactMedia {
+        height: 90%;
+        background-color: #22641a;
+      }
+
+      .contactFooter {
+        height: 10%;
+        width: 100vw;
+        background-color: #5b252b;
+      }
     }
-  }
 
-  //Contact
-  .contact {
-    height: 100vh;
-    width: 100vw;
 
-    .contactMedia {
-      height: 90%;
-      background-color: #22641a;
-    }
-
-    .contactFooter {
-      height: 10%;
+    //APKA==================================================
+    .planningAppBackground {
+      background-color: #a69494;
+      height: 100vh;
       width: 100vw;
-      background-color: #5b252b;
     }
   }
-
-
-  //APKA==================================================
-  .planningAppBackground {
-    background-color: #a69494;
-    height: 100vh;
-    width: 100vw;
-  }
-
 }
-
 
 //PlanningApp:
 
