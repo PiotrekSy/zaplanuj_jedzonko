@@ -452,55 +452,137 @@ table {
   }
   //Benefits
   .benefits {
+
+    height: 275vh;
+    width: 100vw;
+    background: url("./BCGR.jpg") no-repeat top left fixed;
+    background-size: clamp(500px, 100vw, 100vw);
+
     .benefitsBlur {
       height: 100%;
       z-index: 5;
       background: rgba(0, 0, 0, 0.46)
     }
-    height: 335vh;
-    width: 100vw;
-    background: url("./BCGR.jpg") no-repeat top left fixed;
-    background-size: clamp(500px, 100vw, 100vw);
 
     .threeBenefits {
-      height: 300vh;
+      padding-top: 15vh;
+      padding-bottom: 15vh;
+      height: 210vh;
       width: 100vw;
       display: flex;
       align-items: center;
       flex-direction: column;
 
       .benefitsItem {
-        height: 100vh;
+        height: 70vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         width: 80vw;
+        text-align: center;
+
 
         .carouselTitle {
-          font-size: 3rem;
+          font-size: 1.6rem;
           font-weight: 1000;
           color: white;
           text-shadow: black 2px 2px;
-          padding: 5vh
+          padding: 5vh;
+          line-height: 1.8rem;
         }
 
         .carouselText {
           font-size: 1rem;
-          font-weight: 1000;
+          font-weight: 400;
           color: white;
           text-shadow: black 2px 2px;
+          line-height: 1.2rem;
         }
       }
     }
 
     .benefitsContactWrapper {
-      height: 35vh;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
       width: 100vw;
-      background-color: #232325;
+      height: 35vh;
+      background: #232324;
+
+      .benefitsContactText {
+        margin-top: 3vh;
+        text-align: center;
+        font-size: 0.8rem;
+        width: 90vw;
+        color: white;
+        text-shadow: black 2px 2px;
+      }
+
+      .benefitsContactItem {
+        width: 95vw;
+        color: white;
+        text-shadow: black 2px 2px;
+        display: flex;
+        flex-direction: column;
+
+        .benefitsContactInputWrapper {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-evenly;
+
+          .benefitsLabels {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+
+
+            .benefitsContactLabel {
+              text-align: center;
+              margin-top: 2vh;
+              width: 90%;
+              height: 4.5vh;
+              font-size: 0.7rem;
+
+              .benefitInput {
+                text-align: center;
+                margin-top: 1vh;
+                border: none;
+                background: #232325;
+                width: 100%;
+                height: 3vh;
+                color: white;
+              }
+            }
+          }
+
+          .benefitsContactSubmitButton {
+            width: 90vw;
+            align-self: center;
+          }
+        }
+
+        .newsletterButton {
+          width: 100%;
+          background: #c58930;
+          height: 5vh;
+          border: 1px solid #f9ad3b;
+        }
+      }
+
+      .benefitsContactSubmitButton {
+        margin-top: 5vh;
+        width: 100%;
+        background: #c58930;
+        height: 5vh;
+        border: 1px solid #f9ad3b;
+      }
     }
   }
-
   //About
   .about {
     height: 100vh;
