@@ -640,7 +640,7 @@ table {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-color: #c9c9cc;
+      background-color: #939393;
 
       .contactMediaWrapper {
         padding-top: 10vh;
@@ -1178,13 +1178,15 @@ table {
     }
     //Contact
     .contact {
-      height: 90vh;
+      padding-top: 10vh;
+      min-height: 85vh;
+
       width: 100vw;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      background-color: #ffffff;
+      background-color: #939393;
 
       .contactMediaWrapper {
         padding-top: 10vh;
@@ -1194,7 +1196,7 @@ table {
         align-items: center;
 
         .contactInformation {
-          font-size: 1.4rem;
+          font-size: 1.2rem;
 
           p {
             align-self: center;
@@ -1210,7 +1212,6 @@ table {
           font-size: 1.5rem;
           font-weight: bold;
           text-align: center;
-
         }
 
         .contactIcons {
@@ -1220,6 +1221,7 @@ table {
           flex-direction: row;
           justify-content: space-evenly;
           align-items: center;
+          margin-bottom: 10vh;
 
           .contactIcon {
             height: 10vh;
@@ -1267,7 +1269,7 @@ table {
           }
 
           .space {
-            width: 2vw;
+            width: 1vw;
           }
 
           .authorOrange {
