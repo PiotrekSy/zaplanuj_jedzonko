@@ -560,67 +560,74 @@ table {
 
     //About
     .about {
-      height: 305vh;
       width: 100%;
       background-color: #232324;
       display: flex;
       flex-direction: column;
       align-items: center;
 
-      .aboutPhoto {
-        justify-self: center;
-        height: 85vh;
-      }
-
-      .photo1 {
-        justify-self: center;
-        max-width: 500px;
-        width: 100vw;
-        background: url("cook1.jpg") no-repeat top;
-        background-size: cover;
-
-      }
-
-      .photo2 {
-        max-width: 500px;
-        width: 100vw;
-        background: url("cook2.jpg");
-        background-size: cover;
-      }
-
-      .photo3 {
-        width: 100vw;
-        max-width: 500px;
-        background: url("cook3.jpg");
-        background-size: cover;
-      }
-
-      .aboutName {
-        font-size: 1.5rem;
-        margin: 3vw;
-        height: 5vh;
-        color: white;
-        font-weight: bold;
-        text-align: center;
-      }
-
-      .aboutText {
-        line-height: 1rem;
-        text-align: center;
-        margin-bottom: 5vw;
-        height: 5vh;
-        font-size: 0.7rem;
-        background-color: #232324;
+      .aboutPhotoWrapper {
         display: flex;
+        flex-direction: column;
         align-items: center;
-        justify-content: center;
 
-        p {
-          width: 80vw;
+        .aboutPhoto {
+          display: flex;
+          align-items: center;
+          justify-self: center;
+          height: 85vh;
+        }
+
+        .photo1 {
+          justify-self: center;
+          max-width: 500px;
+          width: 100vw;
+          background: url("cook1.jpg") no-repeat top;
+          background-size: cover;
+
+        }
+
+        .photo2 {
+          max-width: 500px;
+          width: 100vw;
+          background: url("cook2.jpg");
+          background-size: cover;
+        }
+
+        .photo3 {
+          width: 100vw;
+          max-width: 500px;
+          background: url("cook3.jpg");
+          background-size: cover;
+        }
+
+        .aboutName {
+          font-size: 1.5rem;
+          margin: 3vw;
           height: 5vh;
           color: white;
-          justify-self: center;
-          align-self: center;
+          font-weight: bold;
+          text-align: center;
+        }
+
+        .aboutText {
+          line-height: 1rem;
+          text-align: center;
+          margin-bottom: 5vw;
+          height: 5vh;
+          font-size: 0.7rem;
+          background-color: #232324;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          p {
+            width: 80vw;
+            height: 5vh;
+            color: white;
+            justify-self: center;
+            align-self: center;
+          }
         }
       }
     }
@@ -783,6 +790,7 @@ table {
       height: 10vh;
       width: 100vw;
       background-color: rgb(35, 35, 35);
+      z-index: 100;
 
       .logo {
         font-family: 'Charmonman', cursive;
@@ -822,11 +830,54 @@ table {
       }
 
       .carouselLeftButton {
-        display: none;
+        position: absolute;
+        align-items: center;
+        top: 10vh;
+        left: 0;
+        color: white;
+        height: 65vh;
+        width: 10vw;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: linear-gradient(-90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.92));
+
+        .carouselIcon {
+          position: absolute;
+          top: 45%;
+          width: 5vw;
+          height: 5vh;
+          background-repeat: no-repeat;
+          background-image: url("outline_chevron_right_white_24dp.png");
+          background-position: center;
+          transform: rotate(180deg);
+        }
       }
 
       .carouselRightButton {
-        display: none;
+        align-items: center;
+        top: 10vh;
+        right: 0;
+        color: white;
+        position: absolute;
+        height: 65vh;
+        width: 10vw;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        background: linear-gradient(90deg, rgba(0, 0, 0, 0), #000000);
+
+        .carouselIcon {
+          position: absolute;
+          top: 45%;
+          width: 5vw;
+          height: 5vh;
+          background-repeat: no-repeat;
+          background-image: url("outline_chevron_right_white_24dp.png");
+          background-position: center;
+        }
       }
 
       .carousel {
