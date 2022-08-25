@@ -4,7 +4,7 @@ import AppContent from "./AppContent"
 
 const AppMain = () => {
     return (
-        <div className="mainContainer">
+        <div className="appMain">
             <AppAuth/>
             <AppContent/>
         </div>

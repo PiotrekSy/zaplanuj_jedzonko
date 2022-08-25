@@ -2,11 +2,10 @@ import React from "react";
 
 const AppAuth = () => {
     return (
-        <div className="auth">
-            <div>
-
+            <div className="auth">
+                <div>
+                </div>
             </div>
-        </div>
     )
 }
 

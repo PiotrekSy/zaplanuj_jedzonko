@@ -109,6 +109,7 @@ table {
     .navigation {
       display: none;
     }
+
     .mobileAppNavigation,
     .mobileNavigation {
       display: flex;
@@ -155,7 +156,7 @@ table {
       }
     }
     a {
-      color: #000000;
+      color: #80511f;
       text-decoration: none;
       font-size: 1rem;
       text-shadow: #503b14 1px 1px 2px;
@@ -1286,17 +1287,297 @@ table {
 
 .planningApp {
   @media only screen and (max-width: 999px) {
-    .planningAppBackground {
-      background-color: #a69494;
+    background: url("image.png");
+    background-size: 80%;
+    height: 100vh;
+    width: 100vw;
+
+    .navigation {
+      display: none;
+    }
+
+    .appMobileNavigation {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      height: clamp(10vh, 10vh, 10vh);
+      width: clamp(10vh, 10vh, 10vh);
+
+      .mobileMenuIcon {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+
+
+        .topBar {
+          position: relative;
+          width: 50%;
+          height: 3px;
+          background-color: #c78a2f;
+          top: -10%;
+          box-shadow: rgba(0, 0, 0, 0.22) 2px 2px 0.4px;
+        }
+
+        .middleBar {
+          position: relative;
+          width: 50%;
+          height: 3px;
+          background-color: #c78a2f;
+          box-shadow: rgba(0, 0, 0, 0.22) 2px 2px 0.4px;
+        }
+
+        .bottomBar {
+          position: relative;
+          width: 50%;
+          height: 3px;
+          background-color: #c78a2f;
+          top: 10%;
+          box-shadow: rgba(0, 0, 0, 0.22) 2px 2px 0.4px;
+        }
+      }
+    }
+
+    a {
+      color: #c78a2f;
+      text-decoration: none;
+      font-size: 1rem;
+      text-shadow: #503b14 1px 1px 2px;
+    }
+
+    .menu__btn {
+      position: relative;
+      align-self: center;
+      width: 100%;
+      height: 100%;
+    }
+
+    .nav-menu {
+      background-color: rgba(5, 5, 5, 0.93);
+      width: 100vw;
+      font-weight: bold;
       height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: absolute;
+      top: 0;
+      right: -100%;
+      transition: 0.2s;
+      z-index: 100;
+
+      .mobileMenuCloseButton {
+        top: 0;
+        left: 80vw;
+        width: 100%;
+        height: 100%;
+
+        .mobileMenuCloseIcon {
+          position: absolute;
+          top: 0;
+          right: 0;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          height: 10vh;
+          width: 10vh;
+          z-index: 2;
+
+          .crossBarOne {
+            position: relative;
+            width: 50%;
+            height: 3px;
+            background-color: #c78a2f;
+            box-shadow: rgba(0, 0, 0, 0.27) 2px -2px 0.4px;
+            transform: rotate(45deg);
+          }
+
+          .crossBarTwo {
+            position: relative;
+            top: -3px;
+            width: 50%;
+            height: 3px;
+            background-color: #c78a2f;
+            box-shadow: rgba(0, 0, 0, 0.2) 2px 2px 0.4px;
+            transform: rotate(-45deg);
+          }
+        }
+      }
+    }
+
+    .nav-menu.active {
+      right: 0;
+      transition: 0.25s;
+      z-index: 100;
+    }
+
+    .nav-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      justify-self: center;
+      align-self: center;
+      list-style: none;
+      font-weight: bold;
+
+      width: 100vw;
+      height: 10vh;
+      font-size: clamp(1em, 1.2em, 1.4em);
+      text-decoration: none;
+      color: #80511f;
+
+    }
+
+    .nav-menu-items a:hover {
+      background-color: rgba(122, 122, 122, 0.94);
+    }
+
+    .nav-menu-items {
+      justify-self: center;
+      align-self: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
       width: 100vw;
     }
-  }
-  @media only screen and (max-width: 999px) {
-    .planningAppBackground {
-      background-color: #a69494;
-      height: 100vh;
+
+    .navbar-toggle {
+      background-color: #ffffff;
+      width: 100%;
+      height: 80px;
+      display: flex;
+      justify-self: center;
+      align-self: center;
+      justify-content: center;
+      align-items: center;
+    }
+
+    //header
+    .appHeader {
+      position: fixed;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: clamp(10vh, 10vh, 10vh);
       width: 100vw;
+      background-color: rgb(35, 35, 35);
+
+      .logo {
+        font-family: 'Charmonman', cursive;
+        display: flex;
+        flex-direction: row;
+        cursor: pointer;
+
+        .zaplanuj {
+          margin-left: 5vw;
+          color: white;
+          font-size: clamp(3vh, 4vw, 4.5vh);
+        }
+
+        .space {
+          width: 2vw;
+        }
+
+        .jedzonko {
+          font-size: clamp(3vh, 4vw, 4.5vh);
+          color: #E58A20;
+        }
+      }
+    }
+  }
+  @media only screen and (min-width: 1000px) {
+
+    background: url("image.png");
+    background-size: 50%;
+    height: 100vh;
+    width: 100vw;
+
+    .navigation {
+      height: 10vh;
+      width: 100vw;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      .navButtons {
+        display: flex;
+        height: 10vh;
+        width: 100%;
+        align-items: flex-end;
+        justify-content: flex-end;
+
+        .navMenuItems {
+          height: 10vh;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: flex-end;
+          cursor: pointer;
+
+          .nav-text {
+            color: white;
+            font-size: 0.9rem;
+            height: 10vh;
+            width: 12vw;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+          }
+        }
+      }
+    }
+    .mobileAppNavigation,
+    .mobileNavigation {
+      display: none;
+    }
+    .nav-menu-items a:hover, .nav-menu-items, .navbar-toggle,
+    .nav-menu.active {
+      display: none;
+    }
+    //header
+    .appHeader {
+      position: fixed;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: 10vh;
+      width: 100vw;
+      background-color: rgb(35, 35, 35);
+      z-index: 100;
+
+      .logo {
+        font-family: 'Charmonman', cursive;
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+
+        .zaplanuj {
+          margin-left: 3vw;
+          color: white;
+          font-size: clamp(3vh, 3vw, 3vh);
+        }
+
+        .space {
+          width: 1vw;
+        }
+
+        .jedzonko {
+          font-size: clamp(3vh, 3vw, 3vh);
+          color: #E58A20;
+        }
+      }
     }
   }
 }

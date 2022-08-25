@@ -1,6 +1,6 @@
-import Navbar from "../componentsHomePage/Navbar";
 import AppNavbar from "./AppNavbar";
 import React from "react";
+import AppMobileNavbar from "./AppMobileNavbar";
 
 const AppHeader = () => {
     return (
@@ -10,8 +10,8 @@ const AppHeader = () => {
                 <div className="space"></div>
                 <div className="jedzonko"> Jedzonko</div>
             </div>
-            <Navbar/>
             <AppNavbar/>
+            <AppMobileNavbar/>
         </div>
     )
 }

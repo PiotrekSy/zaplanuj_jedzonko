@@ -1,82 +1,41 @@
 import React from "react";
-import {useState} from "react";
 import {Link} from 'react-scroll'
 import {Link as LinkRouter} from "react-router-dom";
 
 const MobileNavbar = () => {
 
-    const [visibility, setVisibility] = useState(false);
-
-    const showSidebar = () => setVisibility(!visibility);
-
-    return (<div className="mobileAppNavigation">
-            {/*buttons to open and close mobile menu*/}
-            <div id="menu__toggle" style={{display: visibility ? "none" : "flex"}} className="menu__btn">
-                <label className="menu__btn" htmlFor="menu__toggle" onClick={showSidebar}>
-                    <div className="mobileMenuIcon">
-                        <div className="topBar"></div>
-                        <div className="middleBar"></div>
-                        <div className="bottomBar"></div>
-                    </div>
-                </label>
+    return (
+        <div className="navigation">
+            <div className="navButtons">
+                <div className='navMenuItems'>
+                    <Link className="nav-text"
+                          to="/"
+                          spy={true}
+                          smooth={true}
+                          duration={500}>
+                        PULPIT
+                    </Link>
+                    <Link className="nav-text"
+                          to="przepisy"
+                          spy={true}
+                          smooth={true}
+                          duration={500}>
+                        PRZEPISY
+                    </Link>
+                    <Link className="nav-text"
+                          to="plany"
+                          spy={true}
+                          smooth={true}
+                          duration={500}>
+                        PLANY
+                    </Link>
+                    <LinkRouter className="nav-text" to="/"
+                                style={{textDecoration: "none", color: "#E58A20", marginRight: "3vw"}}>
+                        WRÓĆ NA GŁÓWNĄ
+                    </LinkRouter>
+                </div>
             </div>
-            <nav className={visibility ? 'nav-menu active' : 'nav-menu'}>
-                <ul className='nav-menu-items' onClick={showSidebar}>
-                    <label className="mobileMenuCloseButton" htmlFor="menu__toggle" onClick={showSidebar}>
-                        <div className="mobileMenuCloseIcon">
-                            <div className="crossBarOne"></div>
-                            <div className="crossBarTwo"></div>
-                        </div>
-                    </label>
-
-                    {/*links*/}
-
-                    <li className="nav-text">
-                        <LinkRouter className="nav-text" to="/" onClick={showSidebar}>
-                            <p className="nav-text">HOME</p>
-                        </LinkRouter>
-                    </li>
-
-                    <li className="nav-text">
-                        <Link className="nav-text"
-                              to="isItWorth"
-                              spy={true}
-                              smooth={true}
-                              duration={500}
-                              onClick={showSidebar}>
-                            <p className="nav-text">DLACZEGO WARTO?</p>
-                        </Link>
-                    </li>
-
-                    <li className="nav-text">
-                        <Link className="nav-text"
-                              to="about"
-                              spy={true}
-                              smooth={true}
-                              duration={500}
-                              onClick={showSidebar}>
-                            <p className="nav-text">O MNIE</p>
-                        </Link>
-                    </li>
-                    <li className="nav-text">
-                        <Link className="nav-text"
-                              to="contact"
-                              spy={true}
-                              smooth={true}
-                              duration={500}
-                              onClick={showSidebar}>
-                            <p className="nav-text">KONTAKT</p>
-                        </Link>
-                    </li>
-                    <li className="nav-text">
-                        <LinkRouter className="nav-text" to="planningApp">
-                            <p className="nav-text">ZAPLANUJ POSIŁKI!</p>
-                        </LinkRouter>
-                    </li>
-                </ul>
-            </nav>
         </div>
-
     )
 }
 
