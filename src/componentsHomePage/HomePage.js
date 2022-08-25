@@ -10,10 +10,10 @@ const HomePage = () => {
     return (
         <div className="homePage">
             <Header className="header"/>
-            <FirstSection path='/carousel' className="carousel"/>
-            <Benefits path="/isItWorth" title="isItWorth" className="benefits"/>
-            <About path="/about" className="about"/>
-            <Contact path="/contact" className="contact"/>
+            <FirstSection id="carousel" path='/carousel' className="carousel"/>
+            <Benefits id="benefits" path="/benefits" title="isItWorth" className="benefits"/>
+            <About id="about" path="/about" className="about"/>
+            <Contact id="contact" path="/contact" className="contact"/>
             {/*<ButtonToTop/>*/}
         </div>
     )

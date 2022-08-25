@@ -5,10 +5,10 @@ import AboutPhoto3 from "./AboutPhoto3";
 
 const About = () => {
     return (
-        <div className="about">
-            <AboutPhoto1/>
-            <AboutPhoto2/>
-            <AboutPhoto3/>
+        <div className="about" id="about">
+            <AboutPhoto1 id="about1"/>
+            <AboutPhoto2 id="about2"/>
+            <AboutPhoto3 id="about3"/>
         </div>
     )
 }
