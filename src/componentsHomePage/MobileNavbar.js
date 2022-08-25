@@ -71,7 +71,7 @@ const MobileNavbar = () => {
                         </Link>
                     </li>
                     <li className="nav-text">
-                        <LinkRouter className="nav-text" to="planningApp">
+                        <LinkRouter className="nav-text" to="planningApp" style={{color: "white"}}>
                             <p className="nav-text">ZAPLANUJ POSIŁKI!</p>
                         </LinkRouter>
                     </li>

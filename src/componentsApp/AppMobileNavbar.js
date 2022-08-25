@@ -1,12 +1,14 @@
-import React, {useState} from "react";
-import {Link} from 'react-scroll'
+import React, {useContext, useState} from "react";
 import {Link as LinkRouter} from "react-router-dom";
+import {siteContext} from "../context/Context"
 
 const AppMobileNavbar = () => {
 
     const [visibility, setVisibility] = useState(false);
 
     const showSidebar = () => setVisibility(!visibility);
+
+    useContext(siteContext)
 
     return (
         <div className="appMobileNavigation">
@@ -31,40 +33,18 @@ const AppMobileNavbar = () => {
                     <div className="appMobileNavigation">
                         <div className="navButtons">
                             <div className='navMenuItems'>
-                                <Link className="nav-text"
-                                      to="/"
-                                      spy={true}
-                                      smooth={true}
-                                      duration={500}>
-                                    PULPIT
-                                </Link>
-                                <Link className="nav-text"
-                                      to="przepisy"
-                                      spy={true}
-                                      smooth={true}
-                                      duration={500}>
-                                    PRZEPISY
-                                </Link>
-                                <Link className="nav-text"
-                                      to="plany"
-                                      spy={true}
-                                      smooth={true}
-                                      duration={500}>
-                                    PLANY
-                                </Link>
+                                <div className="nav-text" onClick={() => siteCOn("pulpit")}>PULPIT</div>
+                                <div className="nav-text" onClick={() => setSite("przepisy")}>PRZEPISY</div>
+                                <div className="nav-text" onClick={() => setSite("plany")}>PLANY</div>
                                 <LinkRouter className="nav-text" to="/"
                                             style={{
-                                                textDecoration: "none",
-                                                color: "#7f5020",
-                                                marginRight: "3vw"
+                                                textDecoration: "none", color: "#7f5020", marginRight: "3vw"
                                             }}>
                                     WRÓĆ NA GŁÓWNĄ
                                 </LinkRouter>
                                 <div className="nav-text"
                                      style={{
-                                         textDecoration: "none",
-                                         color: "#cbcbcb",
-                                         marginRight: "3vw"
+                                         textDecoration: "none", color: "#cbcbcb", marginRight: "3vw"
                                      }}>
                                     WYLOGUJ
                                 </div>

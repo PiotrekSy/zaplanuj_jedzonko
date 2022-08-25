@@ -5,8 +5,8 @@ import AppMain from "./AppMain";
 const PlanningApp = () => {
     return (
         <div className="planningApp">
-            <AppHeader/>
-            <AppMain/>
+            <AppHeader className="appHeader"/>
+            <AppMain className = "appWrapper"/>
         </div>
     )
 }

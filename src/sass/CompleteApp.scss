@@ -105,11 +105,9 @@ table {
   //zachowanie WYŁĄCZNIE W MOBILCE !!!!!!!!!!!
   @media only screen and (max-width: 999px) {
     //homepage =============================================
-
     .navigation {
       display: none;
     }
-
     .mobileAppNavigation,
     .mobileNavigation {
       display: flex;
@@ -155,20 +153,12 @@ table {
         }
       }
     }
-    a {
-      color: #80511f;
-      text-decoration: none;
-      font-size: 1rem;
-      text-shadow: #503b14 1px 1px 2px;
-    }
-
     .menu__btn {
       position: relative;
       align-self: center;
       width: 100%;
       height: 100%;
     }
-
     .nav-menu {
       background-color: rgba(5, 5, 5, 0.93);
       width: 100vw;
@@ -222,13 +212,11 @@ table {
         }
       }
     }
-
     .nav-menu.active {
       right: 0;
       transition: 0.25s;
       z-index: 100;
     }
-
     .nav-text {
       display: flex;
       justify-content: center;
@@ -241,7 +229,6 @@ table {
       width: 100vw;
       height: 10vh;
     }
-
     .nav-text a {
       font-size: clamp(1em, 1.2em, 1.4em);
       text-decoration: none;
@@ -252,11 +239,6 @@ table {
       align-self: center;
       display: flex;
       align-items: center;
-    }
-
-    a {
-      display: flex;
-      justify-content: center;
     }
 
     .nav-menu-items a:hover {
@@ -1288,9 +1270,47 @@ table {
 .planningApp {
   @media only screen and (max-width: 999px) {
     background: url("image.png");
-    background-size: 80%;
+    background-size: 50%;
     height: 100vh;
     width: 100vw;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+
+    //header
+    .appHeader {
+      position: fixed;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      height: clamp(10vh, 10vh, 10vh);
+      width: 100vw;
+      background-color: rgb(35, 35, 35);
+
+      .logo {
+        font-family: 'Charmonman', cursive;
+        display: flex;
+        flex-direction: row;
+        cursor: pointer;
+
+        .zaplanuj {
+          margin-left: 5vw;
+          color: white;
+          font-size: clamp(3vh, 4vw, 4.5vh);
+        }
+
+        .space {
+          width: 1vw;
+        }
+
+        .jedzonko {
+          font-size: clamp(3vh, 4vw, 4.5vh);
+          color: #E58A20;
+        }
+      }
+    }
+    //navs
 
     .navigation {
       display: none;
@@ -1342,13 +1362,6 @@ table {
       }
     }
 
-    a {
-      color: #c78a2f;
-      text-decoration: none;
-      font-size: 1rem;
-      text-shadow: #503b14 1px 1px 2px;
-    }
-
     .menu__btn {
       position: relative;
       align-self: center;
@@ -1369,6 +1382,7 @@ table {
       right: -100%;
       transition: 0.2s;
       z-index: 100;
+      font-size: 1.6rem;
 
       .mobileMenuCloseButton {
         top: 0;
@@ -1433,10 +1447,6 @@ table {
 
     }
 
-    .nav-menu-items a:hover {
-      background-color: rgba(122, 122, 122, 0.94);
-    }
-
     .nav-menu-items {
       justify-self: center;
       align-self: center;
@@ -1457,45 +1467,27 @@ table {
       justify-content: center;
       align-items: center;
     }
+    //appMain
+    .appWrapper {
+      margin-top: 12.5vh;
+      width: 90vw;
+      height: 85vh;
+      background: #FFFFFA center;
+      border: 1px #e0b06e dashed;
 
-    //header
-    .appHeader {
-      position: fixed;
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      height: clamp(10vh, 10vh, 10vh);
-      width: 100vw;
-      background-color: rgb(35, 35, 35);
-
-      .logo {
-        font-family: 'Charmonman', cursive;
-        display: flex;
-        flex-direction: row;
-        cursor: pointer;
-
-        .zaplanuj {
-          margin-left: 5vw;
-          color: white;
-          font-size: clamp(3vh, 4vw, 4.5vh);
-        }
-
-        .space {
-          width: 2vw;
-        }
-
-        .jedzonko {
-          font-size: clamp(3vh, 4vw, 4.5vh);
-          color: #E58A20;
-        }
+      .appMain {
+        height: 100%;
+        width: 100%;
+        background: black;
       }
+
     }
+
   }
   @media only screen and (min-width: 1000px) {
 
     background: url("image.png");
-    background-size: 50%;
+    background-size: 20%;
     height: 100vh;
     width: 100vw;
 

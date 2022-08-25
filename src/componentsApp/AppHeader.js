@@ -8,7 +8,7 @@ const AppHeader = () => {
             <div className="logo">
                 <div className="zaplanuj">Zaplanuj</div>
                 <div className="space"></div>
-                <div className="jedzonko"> Jedzonko</div>
+                <div className="jedzonko">Jedzonko</div>
             </div>
             <AppNavbar/>
             <AppMobileNavbar/>
