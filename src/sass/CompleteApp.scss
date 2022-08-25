@@ -1249,13 +1249,13 @@ table {
       }
 
       .contactFooter {
-        height: 10vh;
+        height: 11vh;
         width: 100vw;
         background-color: #232324;
         color: white;
         display: flex;
-        flex-direction: column;
-        justify-content: center;
+        flex-direction: row;
+        justify-content: space-evenly;
         align-items: center;
 
         .author {
