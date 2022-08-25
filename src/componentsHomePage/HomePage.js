@@ -4,7 +4,6 @@ import Benefits from "./Benefits"
 import About from "./About"
 import Contact from "./Contact"
 import FirstSection from "./FirstSection"
-// import ButtonToTop from "./ButtonToTop";
 
 const HomePage = () => {
     return (
@@ -14,7 +13,6 @@ const HomePage = () => {
             <Benefits id="benefits" path="/benefits" title="isItWorth" className="benefits"/>
             <About id="about" path="/about" className="about"/>
             <Contact id="contact" path="/contact" className="contact"/>
-            {/*<ButtonToTop/>*/}
         </div>
     )
 }

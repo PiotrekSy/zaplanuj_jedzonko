@@ -3,8 +3,9 @@ import AppHeader from "./AppHeader";
 
 const PlanningApp = () => {
     return (
-        <div className="planningAppBackground">
+        <div className="planningApp">
             <AppHeader/>
+            <AppMain/>
         </div>
     )
 }
