@@ -14,7 +14,8 @@ const AppAddingPlan = () => {
     return (
         <>
             <div>
-                <button onClick={backToMain}></button>
+                <div>DODAWANIE PLANU</div>
+                <button onClick={backToMain}>Wróć do pulpitu</button>
             </div>
         </>
     )

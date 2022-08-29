@@ -8,12 +8,12 @@ const AppPulpitMain = () => {
 
     const addRecipe = (e) => {
         e.preventDefault()
-        setView("recipeAdding")
+        setView("addRecipe")
     }
 
     const addPlan = (e) => {
         e.preventDefault()
-        setView("planAdding")
+        setView("addPlan")
     }
 
     return (

@@ -14,7 +14,8 @@ const AppAddingRecipe = () => {
     return (
         <>
             <div>
-                <button onClick={backToMain}></button>
+                <div>DODAWANIE PRZEPISU</div>
+                <button onClick={backToMain}>Wróć do pulpitu</button>
             </div>
         </>
     )
