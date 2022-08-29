@@ -1,10 +1,24 @@
 import React from "react";
+import AppPulpitMain from "./AppPulpitMain";
+import AppAddingRecipe from "./AppAddingRecipe"
+import AppAddingPlan from "./AppAddingPlan"
+
+import {AppPulpitContext} from "../context/AppPulpitContext";
+import {useState} from "react";
+
 
 const AppPulpit = () => {
+
+    const [view, setView] = useState("main");
+
     return (
-        <div className="pulpit">
-            <div>Pulpit</div>
-        </div>
+        <AppPulpitContext.Provider value={{view, setView}}>
+            <div className="pulpit">
+                {view === "main" && <AppPulpitMain/>}
+                {view === "addRecipe" && <AppAddingRecipe/>}
+                {view === "addPlan" && <AppAddingPlan/>}
+            </div>
+        </AppPulpitContext.Provider>
     )
 }
 
