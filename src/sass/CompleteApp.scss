@@ -1468,21 +1468,87 @@ table {
       align-items: center;
     }
     //appMain
-    .appWrapper {
+    .appMain {
       margin-top: 12.5vh;
       width: 90vw;
-      height: 85vh;
-      background: #FFFFFA center;
-      border: 1px #e0b06e dashed;
+      height: 80vh;
+      background: rgba(38, 38, 38, 0.25) center;
+      border: 1px #d5792f dashed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
 
-      .appMain {
-        height: 100%;
-        width: 100%;
-        background: black;
+      .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 70vh;
+
+        .pulpit {
+          display: flex;
+          height: 100%;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+
+          h1 {
+            font-weight: bold;
+            font-size: 2rem;
+          }
+
+          h2 {
+            margin-top: 2vh;
+            font-weight: bold;
+          }
+
+          .pulpitForm {
+            margin-top: 2vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            input {
+              width: 60vw;
+
+            }
+
+            button {
+              margin-top: 2vh;
+              margin-bottom: 2vh;
+              border: none;
+              background: #f9ad3b;
+              color: white;
+              font-weight: bold;
+              height: 5vh;
+              width: 30vw;
+              font-size: 1rem;
+            }
+          }
+
+          .pulpitGreetingText {
+            width: 80vw;
+            font-weight: bold;
+          }
+        }
       }
-
     }
-
+    //footer w aplikacji:
+    .footerText {
+      position: absolute;
+      bottom: 0;
+      width: 100vw;
+      height: 5vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #232324;
+      color: white;
+      font-weight: bold;
+      font-size: 0.7rem;
+    }
   }
   @media only screen and (min-width: 1000px) {
 

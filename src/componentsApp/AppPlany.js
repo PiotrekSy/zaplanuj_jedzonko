@@ -2,8 +2,8 @@ import React from "react";
 
 const AppPlany = () => {
     return (
-        <div className="plany">
-            <div/>
+        <div className="pulpit">
+            <div>Plany</div>
         </div>
     )
 }

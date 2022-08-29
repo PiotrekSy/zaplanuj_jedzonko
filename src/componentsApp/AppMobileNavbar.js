@@ -1,14 +1,22 @@
 import React, {useContext, useState} from "react";
 import {Link as LinkRouter} from "react-router-dom";
-import {siteContext} from "../context/Context"
+import {auth} from "../firebase";
+import {signOut} from "firebase/auth";
+import {SiteContext} from "../context/SiteContext";
+import {UserContext} from "../context/UserContext"
 
 const AppMobileNavbar = () => {
 
+    const {setUser} = useContext(UserContext);
     const [visibility, setVisibility] = useState(false);
-
     const showSidebar = () => setVisibility(!visibility);
+    const {setSite} = useContext(SiteContext)
 
-    useContext(siteContext)
+//funckcja wylogowania:
+    const logout = async () => {
+        await signOut(auth)
+        setUser(null)
+    }
 
     return (
         <div className="appMobileNavigation">
@@ -33,7 +41,7 @@ const AppMobileNavbar = () => {
                     <div className="appMobileNavigation">
                         <div className="navButtons">
                             <div className='navMenuItems'>
-                                <div className="nav-text" onClick={() => siteCOn("pulpit")}>PULPIT</div>
+                                <div className="nav-text" onClick={() => setSite("pulpit")}>PULPIT</div>
                                 <div className="nav-text" onClick={() => setSite("przepisy")}>PRZEPISY</div>
                                 <div className="nav-text" onClick={() => setSite("plany")}>PLANY</div>
                                 <LinkRouter className="nav-text" to="/"
@@ -45,7 +53,8 @@ const AppMobileNavbar = () => {
                                 <div className="nav-text"
                                      style={{
                                          textDecoration: "none", color: "#cbcbcb", marginRight: "3vw"
-                                     }}>
+                                     }}
+                                     onClick={logout}>
                                     WYLOGUJ
                                 </div>
                             </div>

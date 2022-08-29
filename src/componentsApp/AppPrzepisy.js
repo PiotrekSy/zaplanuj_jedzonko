@@ -2,8 +2,8 @@ import React from "react";
 
 const AppPrzepisy = () => {
     return (
-        <div className="przepisy">
-            <div/>
+        <div className="pulpit">
+            <div>Przepisy</div>
         </div>
     )
 }

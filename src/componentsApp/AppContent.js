@@ -1,14 +1,19 @@
-import React from "react";
-import AppPulpit from "./AppPulpit.js"
-import AppPrzepisy from "./AppPrzepisy.js"
-import AppPlany from "./AppPlany.js"
+import React, {useContext} from "react";
+import AppPulpit from "./AppPulpit.js";
+import AppPrzepisy from "./AppPrzepisy.js";
+import AppPlany from "./AppPlany.js";
+import {SiteContext} from "../context/SiteContext";
+import "firebase/auth";
 
 const AppContent = () => {
+
+    const {site} = useContext(SiteContext);
+
     return (
         <div className="content">
-            <AppPulpit id="pulpit" path='/pulpit' className="pulpit"/>
-            <AppPrzepisy id="pulpit" path='/przepisy' className="pulpit"/>
-            <AppPlany id="pulpit" path='/plany' className="pulpit"/>
+            {site === "pulpit" && <AppPulpit id="pulpit" path='/pulpit' className="pulpit"/>}
+            {site === "przepisy" && <AppPrzepisy id="przepisy" path='/przepisy' className="[przepisy]"/>}
+            {site === "plany" && <AppPlany id="plany" path='/plany' className="plany"/>}
         </div>
     )
 }
