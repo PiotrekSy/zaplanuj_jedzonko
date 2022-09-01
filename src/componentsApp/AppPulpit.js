@@ -1,5 +1,5 @@
 import React from "react";
-import AppPulpitMain from "./AppPulpitMain";
+import AppPulpitButtons from "./AppPulpitButtons";
 import AppAddingRecipe from "./AppAddingRecipe"
 import AppAddingPlan from "./AppAddingPlan"
 import AppPulpitSavedPlans from "./AppPulpitSavedPlans"
@@ -17,7 +17,7 @@ const AppPulpit = () => {
             <div className="pulpit">
                 {view === "main" &&
                     <>
-                        <AppPulpitMain/>
+                        <AppPulpitButtons/>
                         <AppPulpitSavedPlans/>
                     </>
                 }

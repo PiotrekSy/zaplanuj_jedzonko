@@ -3,9 +3,10 @@ import React from "react";
 const AppPulpitSavedPlans = () => {
 
     return (
-        <>
-            <div style={{alignSelf: "center"}}>SAVED PLANS</div>
-        </>
+        <div className="planDisplay">
+
+
+        </div>
     )
 }
 
