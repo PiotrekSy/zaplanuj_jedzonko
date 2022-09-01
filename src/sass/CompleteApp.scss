@@ -1551,11 +1551,13 @@ table {
           flex-direction: column;
 
           .selectInput {
-            height: 10vh;
+            height: 11vh;
             width: 80vw;
             background: rgba(35, 35, 36, 0.08);
             border: none;
+            font-size: 1.2rem;
           }
+
           .recipeContainer {
             height: 60vh;
             padding: 3vh;
