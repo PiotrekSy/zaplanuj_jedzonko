@@ -1,9 +1,19 @@
 import React from "react";
 
+
 const AppPlany = () => {
+
+
+
+
+
     return (
         <div className="pulpit">
-            <div>Plany</div>
+            <div>
+                {
+
+                }
+            </div>
         </div>
     )
 }

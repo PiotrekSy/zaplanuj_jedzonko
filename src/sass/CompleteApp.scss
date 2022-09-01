@@ -1546,6 +1546,23 @@ table {
           }
         }
 
+        .przepisy {
+          display: flex;
+          flex-direction: column;
+
+          .selectInput {
+            height: 10vh;
+            width: 80vw;
+            background: rgba(35, 35, 36, 0.08);
+            border: none;
+          }
+          .recipeContainer {
+            height: 60vh;
+            padding: 3vh;
+
+          }
+        }
+
         .addRecipeForm {
           height: 100%;
           width: 85vw;
@@ -1556,7 +1573,6 @@ table {
           .recipeName {
             display: flex;
             flex-direction: row;
-            margin-bottom: 3vh;
             height: 5vh;
             align-items: center;
             justify-content: space-between;
@@ -1566,6 +1582,19 @@ table {
               background: rgba(35, 35, 36, 0.08);
               border: none;
             }
+          }
+
+          .selectInput {
+            width: 45vw;
+            background: rgba(35, 35, 36, 0.08);
+            border: none;
+          }
+
+          .recipeMealTypeItems {
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 3vh;
+            justify-content: space-between;
           }
 
           .recipeIngredients {
@@ -1661,6 +1690,8 @@ table {
         }
 
       }
+
+
     }
 
 
