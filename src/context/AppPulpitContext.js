@@ -1,3 +1,3 @@
 import {createContext} from "react";
 
-export const AppPulpitContext = createContext("");
+export const AppPulpitContext = createContext({});

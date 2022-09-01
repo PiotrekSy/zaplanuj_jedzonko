@@ -64,7 +64,7 @@ const AppAddingRecipe = () => {
                                     setMealType(e.target.value)}>
                             <option value="">-Wybierz typ posiłku-</option>
                             <option value="śniadanie">Śniadanie</option>
-                            <option value="lunch">Lunch</option>
+                            <option value="przekąska">Przekąska</option>
                             <option value="obiad">Obiad</option>
                             <option value="podwieczorek">Podwieczorek</option>
                             <option value="kolacja">Kolacja</option>
