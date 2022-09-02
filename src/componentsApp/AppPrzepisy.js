@@ -10,13 +10,14 @@ const AppPrzepisy = () => {
 
     useEffect(() => onSnapshot(collection(db, "recipes"), (snapshot) => {
         setRecipes(snapshot.docs.map(doc => doc.data()))
-    }), [])
+    }), []);
 
     //filtr
     const [mealType, setMealType] = useState("");
     const changeFilter = (e) => {
         setMealType(e.target.value)
     }
+
 //-----------------------------------------
 //wyświetlanie przepisów:
 
@@ -38,8 +39,7 @@ const AppPrzepisy = () => {
         setShowRecipePanel(!showRecipePanel);
     }
 
-    return (
-        <div className="przepisy">
+    return (<div className="przepisy">
             <div>
                 <select value={mealType}
                         className="selectInput"
@@ -65,20 +65,20 @@ const AppPrzepisy = () => {
                         </button>
                     </div> : null)}
             </div>
-            {showRecipePanel &&
-                <div className="recipePanelBackground">
-                    <div className="recipePanel">
-                        <div className="recipeName">{recipeName.toUpperCase()}</div>
-                        <div className="recipeIngredientsText">Składniki:</div>
-                        <div className="recipeIngredients">{ingredientsArray.map((element, index) => <div
-                            key={index}>{index + 1}. {element}</div>)}</div>
-                        <div className="recipeIngredientsText">Sposób przygotowania:</div>
-                        <div className="recipeIngredients">{recipeDescription}</div>
-                        <button className="recipeButton" type="button" onClick={() => setShowRecipePanel(!showRecipePanel)}>EXIT</button>
-                    </div>
-                </div>}
-        </div>
-    )
+            {showRecipePanel && <div className="recipePanelBackground">
+                <div className="recipePanel">
+                    <div className="recipeName">{recipeName.toUpperCase()}</div>
+                    <div className="recipeIngredientsText">Składniki:</div>
+                    <div className="recipeIngredients">{ingredientsArray.map((element, index) => <div
+                        key={index}>{index + 1}. {element}</div>)}</div>
+                    <div className="recipeIngredientsText">Sposób przygotowania:</div>
+                    <div className="recipeIngredients">{recipeDescription}</div>
+                    <button className="recipeButton" type="button"
+                            onClick={() => setShowRecipePanel(!showRecipePanel)}>EXIT
+                    </button>
+                </div>
+            </div>}
+        </div>)
 }
 
 export default AppPrzepisy

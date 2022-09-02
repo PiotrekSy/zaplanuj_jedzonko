@@ -2,7 +2,7 @@ import React, {useState, useEffect, useContext} from "react";
 import {createUserWithEmailAndPassword, onAuthStateChanged} from "firebase/auth"
 import "firebase/auth"
 import db, {auth} from "../firebase"
-import {collection, onSnapshot} from "firebase/firestore";
+import {addDoc, collection, onSnapshot} from "firebase/firestore";
 import {UserContext} from "../context/UserContext";
 
 const Register = () => {
@@ -11,7 +11,7 @@ const Register = () => {
     const [password, setPassword] = useState("");
     const [passwordConfirm, setPasswordConfirm] = useState("");
     const [passwordError, setPasswordError] = useState("")
-    const {setUser} = useContext(UserContext)
+    const {user, setUser} = useContext(UserContext)
     const [emailError, setEmailError] = useState("");
 
     useEffect(() => {
@@ -39,6 +39,7 @@ const Register = () => {
     }
 
     //rejestracja nowego konta pod warunkiem tych samych haseł
+
     const register = async (e) => {
         e.preventDefault()
         // if (!validate()) return
@@ -48,12 +49,14 @@ const Register = () => {
         try {
             await createUserWithEmailAndPassword(auth, email, password)
             onAuthStateChanged(auth, (currentUser) => setUser(currentUser))
-            setEmail("")
-            console.log("zarejestrowano użytkownika w firebase")
+            console.log("zarejestrowano użytkownika w firebase");
+            await addDoc(collection(db, "userBase"), {email});
+            setEmail("");
         } catch {
-            setPasswordError("Failed to create an account!")
+            setPasswordError("Failed to create an account!");
         }
     }
+
 
     return (
         <div className="registrationForm">
@@ -98,7 +101,6 @@ const Register = () => {
                                 type="submit"
                                 onClick={() => {
                                     console.log("Rejestruję się !!!");
-
                                 }}>
                             <div className="regButtonText">Załóż konto!</div>
                         </button>

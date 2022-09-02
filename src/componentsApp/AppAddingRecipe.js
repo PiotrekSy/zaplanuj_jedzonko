@@ -21,7 +21,6 @@ const AppAddingRecipe = () => {
     const [mealType, setMealType] = useState("")
     const [errorMessage, setErrorMessage] = useState(false)
 
-
     //dodawanie składnika do przepisu:
     const recipeRef = collection(db, "recipes");
 
