@@ -1312,6 +1312,7 @@ table {
     }
     //navs
 
+
     .navigation {
       display: none;
     }
@@ -1479,6 +1480,98 @@ table {
       justify-content: center;
       align-items: center;
 
+      .loginChangeButton {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .loginChangeText {
+          margin-top: 10vh;
+        }
+
+        button {
+          margin-top: 2vh;
+          background: #d5792f;
+          color: white;
+          font-weight: bold;
+          font-size: 0.9rem;
+          border: none;
+          height: 5vh;
+          width: 30vw;
+          box-shadow: #232324 1px 1px 1px;
+        }
+      }
+
+      .registrationForm {
+        background: rgba(35, 35, 36, 0.23);
+        width: 90%;
+        min-height: 50%;
+        align-self: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .errorMessage {
+          color: red;
+          height: 2vh;
+          width: 100%;
+          font-size: 0.7rem;
+        }
+
+        .regTitle {
+          text-align: center;
+          font-size: 1.5rem;
+          font-weight: bold;
+          margin: 3vh;
+        }
+
+        .inputWrapper {
+          display: flex;
+          flex-direction: row;
+          width: 70vw;
+          justify-content: space-between;
+          margin: 3vh;
+          align-items: center;
+          text-align: left;
+
+          input {
+            border: none;
+            background: rgba(35, 35, 36, 0.06);
+          }
+        }
+
+        button {
+          margin-top: 5vh;
+          background: #d5792f;
+          color: white;
+          font-weight: bold;
+          font-size: 0.9rem;
+          border: none;
+          height: 5vh;
+          min-width: 25vw;
+          box-shadow: #232324 1px 1px 1px;
+          margin-bottom: 5vh;
+        }
+
+        .regButtons {
+
+          button {
+            margin-top: 5vh;
+            background: #d5792f;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9rem;
+            border: none;
+            height: 5vh;
+            min-width: 25vw;
+            box-shadow: #232324 1px 1px 1px;
+          }
+        }
+
+      }
+
       .content {
         display: flex;
         flex-direction: column;
@@ -1566,6 +1659,7 @@ table {
           }
 
           .selectInput {
+            padding-left: 5vw;
             height: 11vh;
             width: 80vw;
             background: rgba(35, 35, 36, 0.08);
@@ -1588,6 +1682,13 @@ table {
               justify-content: space-between;
               align-items: center;
               min-width: 75vw;
+
+              .lupka {
+                height: 100%;
+                width: 100%;
+                background: #232324;
+              }
+
             }
 
             .recipeItem:nth-of-type(2n) {
@@ -1609,8 +1710,6 @@ table {
               min-width: 10vw;
               border-radius: 20%;
             }
-
-
           }
         }
 
@@ -1738,10 +1837,7 @@ table {
             }
           }
         }
-
       }
-
-
     }
 
 
@@ -1760,6 +1856,7 @@ table {
       font-size: 0.7rem;
     }
   }
+
   @media only screen and (min-width: 1000px) {
 
     background: url("image.png");

@@ -61,7 +61,7 @@ const AppPrzepisy = () => {
                         <div id="thirdChild" style={{display: "none"}}>
                             <ul>{element.ingredients.map((element, index) => <li key={index}>{element}</li>)}</ul>
                         </div>
-                        <button onClick={showRecipe}>lup</button>
+                        <button onClick={showRecipe}><div className="lupka"/></button>
                     </div> : null)}
             </div>
             {showRecipePanel &&

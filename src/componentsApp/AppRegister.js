@@ -60,29 +60,35 @@ const Register = () => {
         <div className="registrationForm">
             <div className="regTitle">Załóż konto</div>
             <form className="greyArea" onSubmit={register}>
-                <label className="regLabel" htmlFor="email">Email:</label>
-                <input className="regInput" type="email"
-                       id="email"
-                       onChange={e => {
-                           setEmail(e.target.value);
-                       }}
-                       onBlur={emailCheck}>
-                </input>
+                <div className="inputWrapper">
+                    <label className="regLabel" htmlFor="email">Email:</label>
+                    <input className="regInput" type="email"
+                           id="email"
+                           onChange={e => {
+                               setEmail(e.target.value);
+                           }}
+                           onBlur={emailCheck}>
+                    </input>
+                </div>
                 {emailError !== "" && <div className="errorMessage">{emailError}</div>}
-                <label className="regLabel" htmlFor="password">Hasło:</label>
-                <input className="regInput" type="password"
-                       id="password"
-                       onChange={e => {
-                           setPassword(e.target.value)
-                           passwordLengthCheck();
-                       }}>
-                </input>
+                <div className="inputWrapper">
+                    <label className="regLabel" htmlFor="password">Hasło:</label>
+                    <input className="regInput" type="password"
+                           id="password"
+                           onChange={e => {
+                               setPassword(e.target.value)
+                               passwordLengthCheck();
+                           }}>
+                    </input>
+                </div>
                 {passwordError !== "" && <div className="errorMessage">{passwordError}</div>}
-                <label className="regLabel" htmlFor="passwordConfirm">Powtórz hasło:</label>
-                <input className="regInput" type="password"
-                       id="passwordConfirm"
-                       onChange={e => setPasswordConfirm(e.target.value)}>
-                </input>
+                <div className="inputWrapper">
+                    <label className="regLabel" htmlFor="passwordConfirm">Powtórz hasło:</label>
+                    <input className="regInput" type="password"
+                           id="passwordConfirm"
+                           onChange={e => setPasswordConfirm(e.target.value)}>
+                    </input>
+                </div>
                 {passwordConfirm.length > 0 ? password !== passwordConfirm &&
                     <div className="errorMessage">Hasła muszą być identyczne!!</div> : null}
 

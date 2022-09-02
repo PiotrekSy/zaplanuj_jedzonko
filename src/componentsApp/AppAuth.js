@@ -30,12 +30,12 @@ const AppAuth = () => {
             {user === null && wantToRegister ? <AppRegister title="AppRegister"/> : null}
 
             {/*buttony*/}
-            {wantToRegister && user === null && <div>
-                <div>Mam konto, chcę się zalogować!</div>
+            {wantToRegister && user === null && <div className="loginChangeButton">
+                <div className="loginChangeText">Mam konto, chcę się zalogować!</div>
                 <button type="button" onClick={moveToLogin}>Zaloguj!</button>
             </div>}
-            {wantToLogin && user === null && <div>
-                <div>Nie mam konta, chcę się zarejestrować!</div>
+            {wantToLogin && user === null && <div className="loginChangeButton">
+                <div className="loginChangeText">Nie mam konta, chcę się zarejestrować!</div>
                 <button type="button" onClick={moveToRegister}>Załóż konto!</button>
             </div>}
 

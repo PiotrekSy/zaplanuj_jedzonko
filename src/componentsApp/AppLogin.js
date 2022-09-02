@@ -41,6 +41,7 @@ const AppLogin = () => {
         try {
             await signInWithEmailAndPassword(auth, email, password);
             console.log("Zalogowano z powodzeniem, Witam w aplikacji! ;)")
+
         } catch {
             console.log("Failed to log in!")
         }
@@ -51,25 +52,30 @@ const AppLogin = () => {
             <div className="regForm">
                 <div className="regTitle">Zaloguj się</div>
                 <form className="greyArea" onSubmit={login}>
-                    <label className="regLabel" htmlFor="email">Email:</label>
-                    <input className="regInput" type="email"
-                           id="email"
-                           onChange={e => {
-                               setEmail(e.target.value);
-                               emailCheck();
-                           }}>
-                    </input>
-
+                    <div className="inputWrapper">
+                        <label className="regLabel" htmlFor="email">Email:</label>
+                        <input className="regInput" type="email"
+                               id="email"
+                               onChange={e => {
+                                   setEmail(e.target.value);
+                                   emailCheck();
+                               }}>
+                        </input>
+                    </div>
                     {emailError !== "" && <div className="errorMessage">{emailError}</div>}
-                    <label className="regLabel" htmlFor="password">Hasło:</label>
-                    <input className="regInput" type="password"
-                           id="password"
-                           onChange={e => {
-                               setPassword(e.target.value)
-                               passwordLengthCheck();
-                           }}>
-                    </input>
-                    {passwordError !== "" && <div className="errorMessage">{passwordError}</div>}
+                    <div className="inputWrapper">
+                        <label className="regLabel" htmlFor="password">Hasło:</label>
+                        <input className="regInput" type="password"
+                               id="password"
+                               onChange={e => {
+                                   setPassword(e.target.value)
+                                   passwordLengthCheck();
+                               }}>
+                        </input>
+                    </div>
+                    {
+                        passwordError !== "" && <div className="errorMessage">{passwordError}</div>
+                    }
                     <div className="regButtons">
                         <div className="regButton">
                             <button className="regButtonRange"
