@@ -19,6 +19,7 @@ const AppAddingRecipe = () => {
     const [description, setDescription] = useState("")
     const [error, setError] = useState("")
     const [mealType, setMealType] = useState("")
+    const [errorMessage, setErrorMessage] = useState(false)
 
     const recipeRef = collection(db, "recipes");
 
@@ -33,15 +34,17 @@ const AppAddingRecipe = () => {
         e.preventDefault();
         if (description !== "" && recipeName !== "" && ingredients.length > 1 && mealType !== "") {
             await addDoc(recipeRef, {name: recipeName, description, ingredients, mealType});
-            console.log(`wysłano przepis:)`)
+            console.log(`wysłano przepis :)`)
             setRecipeName("")
             setDescription("")
             setIngredients([])
             setError("Przepis wysłany :)")
             setMealType("")
+            setErrorMessage(true)
         } else {
-            setError("nie wysyłam, coś jest nie teges!")
-            console.log("nie wysyłam, coś jest nie teges!")
+            setErrorMessage(false)
+            setError("Coś poszło nie tak...")
+            console.log("Coś poszło nie tak...")
         }
     }
 
@@ -98,8 +101,7 @@ const AppAddingRecipe = () => {
                         </textarea>
                 </div>
 
-
-                <div className="recipeError">{error}</div>
+                <div className="recipeError" style={{color: errorMessage ? "green" : "red"}}>{error}</div>
 
                 <div className="recipeButtons">
                     <button type="button" onClick={backToMain}>WRÓĆ</button>

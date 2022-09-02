@@ -23,24 +23,24 @@ const AppPrzepisy = () => {
     const [showRecipePanel, setShowRecipePanel] = useState(false)
     const [recipeName, setRecipeName] = useState("")
     const [recipeDescription, setRecipeDescription] = useState("")
-    const [recipeIngredients, setRecipeIngredients] = useState([])
-
-    let ingredientArray = [];
+    const [ingredientsArray, setIngredientsArray] = useState([]);
 
     const showRecipe = (e) => {
         e.preventDefault();
         setRecipeName(e.target.parentElement.firstElementChild.innerText);
         setRecipeDescription(e.target.parentElement.querySelector("#secondChild").innerText);
-        console.log(ingredientArray)
-        setRecipeIngredients(ingredientArray.map((element, index) => <p key={index}>{element}</p>
-        ));
+        let array = e.target.parentElement.querySelector("#thirdChild").getElementsByTagName("li");
+        let myArray = [];
+        for (let i = 0; i < array.length; i++) {
+            myArray.push(array[i].innerText)
+        }
+        setIngredientsArray(myArray)
         setShowRecipePanel(!showRecipePanel);
+
     }
 
     return (
-
         <div className="przepisy">
-            <button type="button" onClick={() => console.log(ingredientArray)}>asdasdasdas</button>
             <div>
                 <select value={mealType}
                         className="selectInput"
@@ -56,18 +56,19 @@ const AppPrzepisy = () => {
             <div className="recipeContainer">
                 {recipes.map((element, index) => element.mealType === mealType ?
                     <div className="recipeItem" key={index}>
-                        <div id="firstChild">{element.name}</div>
+                        <div id="firstChild">{element.name.toUpperCase()}</div>
                         <div id="secondChild" style={{display: "none"}}>{element.description}</div>
-                        <div id="thirdChild"
-                             style={{display: "none"}}>{ingredientArray.push(...element.ingredients)}</div>
+                        <div id="thirdChild" style={{display: "none"}}>
+                            <ul>{element.ingredients.map((element, index) => <li key={index}>{element}</li>)}</ul>
+                        </div>
                         <button onClick={showRecipe}>lup</button>
                     </div> : null)}
             </div>
             {showRecipePanel &&
                 <div className="recipePanel">
-                    <div>{recipeName}</div>
+                    <div>{recipeName.toUpperCase()}</div>
                     <div>Składniki:</div>
-                    <div>{recipeIngredients}</div>
+                    <div>{ingredientsArray.map((element, index) => <div key={index}>{index + 1}. {element}</div>)}</div>
                     <div>Sposób przygotowania:</div>
                     <div>{recipeDescription}</div>
                     <button type="button" onClick={() => setShowRecipePanel(!showRecipePanel)}>EXIT</button>
