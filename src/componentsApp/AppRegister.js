@@ -23,7 +23,6 @@ const Register = () => {
     const isValidEmail = (email) => {
         return /\S+@\S+\.\S+/.test(email);
     }
-
     const emailCheck = () => {
         if (!isValidEmail(email)) {
             setEmailError('Podany email jest nieprawidłowy');
@@ -31,7 +30,6 @@ const Register = () => {
             setEmailError("");
         }
     }
-
     const passwordLengthCheck = () => {
         if (password.length <= 4) {
             setPasswordError('Hasło ma mieć przynajmniej 6 znaków');

@@ -6,7 +6,6 @@ import AppPulpitSavedPlans from "./AppPulpitSavedPlans"
 import {AppPulpitContext} from "../context/AppPulpitContext";
 import {useState} from "react";
 
-
 const AppPulpit = () => {
 
     const [view, setView] = useState("main");

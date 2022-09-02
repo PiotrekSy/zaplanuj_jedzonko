@@ -21,15 +21,20 @@ const AppAddingRecipe = () => {
     const [mealType, setMealType] = useState("")
     const [errorMessage, setErrorMessage] = useState(false)
 
-    const recipeRef = collection(db, "recipes");
 
     //dodawanie składnika do przepisu:
+    const recipeRef = collection(db, "recipes");
+
     const addIngredient = (e) => {
-        e.preventDefault();
-        setIngredients([...ingredients, newIngredient])
-        setNewIngredient("")
+        if (newIngredient !== "") {
+            e.preventDefault();
+            setIngredients([...ingredients, newIngredient])
+            setNewIngredient("")
+        }
     }
+
     //dodawanie przepisu do firebase:
+
     const sendRecipe = async (e) => {
         e.preventDefault();
         if (description !== "" && recipeName !== "" && ingredients.length > 1 && mealType !== "") {
@@ -51,13 +56,11 @@ const AppAddingRecipe = () => {
     return (
         <>
             <form className="addRecipeForm">
-
                 <div className="recipeName">
                     <div>Nazwa przepisu:</div>
                     <input type="text" value={recipeName} onChange={(e) =>
                         setRecipeName(e.target.value)}/>
                 </div>
-
                 <div className="recipeIngredientsItems" style={{marginTop: "3vh"}}>
                     <div className="recipeMealTypeItems">
                         <div>Typ posiłku:</div>
@@ -74,7 +77,6 @@ const AppAddingRecipe = () => {
                         </select>
                     </div>
                 </div>
-
                 <div className="recipeIngredients">
                     <div className="recipeIngredientsItems">
                         <div>Dodaj składnik:</div>
@@ -85,14 +87,10 @@ const AppAddingRecipe = () => {
                             <button type="button" onClick={addIngredient}>+</button>
                         </div>
                     </div>
-
                     <div className="recipeIngredientsList">
-
                         <div>{ingredients.map((element) => element + ", ")}</div>
                     </div>
                 </div>
-
-
                 <div className="recipeDescription">
                     <div>Wpisz przepis:</div>
                     <textarea value={description}
@@ -100,14 +98,11 @@ const AppAddingRecipe = () => {
                                   setDescription(e.target.value)}>
                         </textarea>
                 </div>
-
                 <div className="recipeError" style={{color: errorMessage ? "green" : "red"}}>{error}</div>
-
                 <div className="recipeButtons">
                     <button type="button" onClick={backToMain}>WRÓĆ</button>
                     <button type="submit" onClick={sendRecipe}>DODAJ PRZEPIS</button>
                 </div>
-
             </form>
         </>
     )
