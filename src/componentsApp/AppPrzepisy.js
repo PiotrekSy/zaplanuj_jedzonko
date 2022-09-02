@@ -36,7 +36,6 @@ const AppPrzepisy = () => {
         }
         setIngredientsArray(myArray)
         setShowRecipePanel(!showRecipePanel);
-
     }
 
     return (

@@ -41,7 +41,8 @@ const Register = () => {
     }
 
     //rejestracja nowego konta pod warunkiem tych samych haseł
-    const register = async () => {
+    const register = async (e) => {
+        e.preventDefault()
         // if (!validate()) return
         if (password !== passwordConfirm) {
             return setPasswordError('Hasła nie są identyczne!')
@@ -49,8 +50,8 @@ const Register = () => {
         try {
             await createUserWithEmailAndPassword(auth, email, password)
             onAuthStateChanged(auth, (currentUser) => setUser(currentUser))
-            // await addNewUser()
             setEmail("")
+            console.log("zarejestrowano użytkownika w firebase")
         } catch {
             setPasswordError("Failed to create an account!")
         }
@@ -94,12 +95,12 @@ const Register = () => {
 
                 {/*buttony*/}
                 <div className="regButtons">
-
                     <div className="regButton">
                         <button className="regButtonRange"
                                 type="submit"
                                 onClick={() => {
                                     console.log("Rejestruję się !!!");
+
                                 }}>
                             <div className="regButtonText">Załóż konto!</div>
                         </button>

@@ -24,7 +24,6 @@ const AppAuth = () => {
 
     return (
         <div className="appMain" style={{display: "flex", flexDirection: "column"}}>
-
             {/*sekcje*/}
             {user === null && wantToLogin ? <AppLogin/> : null}
             {user === null && wantToRegister ? <AppRegister title="AppRegister"/> : null}
@@ -40,8 +39,7 @@ const AppAuth = () => {
             </div>}
 
             {/*właściwe dane aplikacji po loginie*/}
-            {user !== null && <AppContent/>}
-
+            {user !== null && <AppContent name="planningApp" id="planningApp" href="/planningApp"/>}
         </div>
     )
 }

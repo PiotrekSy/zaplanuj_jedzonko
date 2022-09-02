@@ -3,7 +3,6 @@ import AppPulpitButtons from "./AppPulpitButtons";
 import AppAddingRecipe from "./AppAddingRecipe"
 import AppAddingPlan from "./AppAddingPlan"
 import AppPulpitSavedPlans from "./AppPulpitSavedPlans"
-
 import {AppPulpitContext} from "../context/AppPulpitContext";
 import {useState} from "react";
 

@@ -36,12 +36,12 @@ const AppLogin = () => {
     }
 
     //funckcja logowania:
+    //funckcja logowania:
     const login = async (e) => {
         e.preventDefault()
         try {
             await signInWithEmailAndPassword(auth, email, password);
             console.log("Zalogowano z powodzeniem, Witam w aplikacji! ;)")
-
         } catch {
             console.log("Failed to log in!")
         }
