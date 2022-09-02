@@ -1659,12 +1659,16 @@ table {
           }
 
           .selectInput {
+            font-weight: bold;
             padding-left: 5vw;
+            padding-right: 5vw;
             height: 11vh;
             width: 80vw;
             background: rgba(35, 35, 36, 0.08);
             border: none;
             font-size: 1.2rem;
+            text-align: center;
+            -webkit-appearance: none;
           }
 
           .recipeContainer {
@@ -1672,7 +1676,7 @@ table {
             padding: 3vh;
 
             .recipeItem {
-              height: 8vh;
+              height: 10vh;
               padding-left: 5vw;
               padding-right: 2vw;
               list-style: none;
@@ -1683,34 +1687,39 @@ table {
               align-items: center;
               min-width: 75vw;
 
-              .lupka {
-                height: 100%;
-                width: 100%;
-                background: #232324;
+              button {
+                height: 70%;
+                background: #d5792f;
+                color: white;
+                font-weight: bold;
+                font-size: 0.9rem;
+                border: none;
+                min-width: 12vw;
+                border-radius: 10px;
+
+                .lupka {
+                  height: 100%;
+                  width: 100%;
+                  background: no-repeat center url("search_FILL0_wght400_GRAD0_opsz48.png");
+                  background-size: contain;
+                  pointer-events: none;
+                }
               }
 
-            }
 
-            .recipeItem:nth-of-type(2n) {
-              background: rgba(35, 35, 36, 0.08);
-              list-style: none;
-              text-decoration: none;
-              display: flex;
-              flex-direction: row;
-              justify-content: space-between;
-            }
-
-            button {
-              background: #d5792f;
-              color: white;
-              font-weight: bold;
-              font-size: 0.9rem;
-              border: none;
-              height: 70%;
-              min-width: 10vw;
-              border-radius: 20%;
             }
           }
+
+          .recipeItem:nth-of-type(2n) {
+            background: rgba(35, 35, 36, 0.08);
+            list-style: none;
+            text-decoration: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+          }
+
+
         }
 
         .addRecipeForm {
