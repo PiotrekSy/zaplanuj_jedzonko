@@ -46,6 +46,7 @@ const Register = () => {
         if (password !== passwordConfirm) {
             return setPasswordError('Hasła nie są identyczne!')
         }
+
         try {
             await createUserWithEmailAndPassword(auth, email, password)
             onAuthStateChanged(auth, (currentUser) => setUser(currentUser))
@@ -56,7 +57,6 @@ const Register = () => {
             setPasswordError("Failed to create an account!");
         }
     }
-
 
     return (
         <div className="registrationForm">
