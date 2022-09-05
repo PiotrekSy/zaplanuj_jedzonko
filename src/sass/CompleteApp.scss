@@ -2051,16 +2051,16 @@ table {
           font-weight: bold;
           font-size: 0.9rem;
           border: none;
-          height: 5vh;
-          width: 30vw;
+          height: 4vh;
+          width: 10vw;
           box-shadow: #232324 1px 1px 1px;
         }
       }
 
       .registrationForm {
         background: rgba(35, 35, 36, 0.23);
-        width: 90%;
-        min-height: 50%;
+        width: 20vw;
+        min-height: 50vh;
         align-self: center;
         text-align: center;
         display: flex;
@@ -2068,11 +2068,13 @@ table {
         justify-content: center;
         align-items: center;
 
+
         .errorMessage {
           color: red;
           height: 2vh;
           width: 100%;
           font-size: 0.7rem;
+          text-shadow: 1px 1px 1px;
         }
 
         .regTitle {
@@ -2084,8 +2086,7 @@ table {
 
         .inputWrapper {
           display: flex;
-          flex-direction: row;
-          width: 70vw;
+          flex-direction: column;
           justify-content: space-between;
           margin: 3vh;
           align-items: center;
@@ -2104,8 +2105,8 @@ table {
           font-weight: bold;
           font-size: 0.9rem;
           border: none;
-          height: 5vh;
-          min-width: 25vw;
+          height: 4vh;
+          width: 10vw;
           box-shadow: #232324 1px 1px 1px;
           margin-bottom: 5vh;
         }
@@ -2119,8 +2120,8 @@ table {
             font-weight: bold;
             font-size: 0.9rem;
             border: none;
-            height: 5vh;
-            min-width: 25vw;
+            height: 4vh;
+            width: 10vw;
             box-shadow: #232324 1px 1px 1px;
           }
         }

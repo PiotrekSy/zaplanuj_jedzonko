@@ -23,6 +23,7 @@ const AppAuth = () => {
     }
 
     return (
+
         <div className="appMain" style={{display: "flex", flexDirection: "column"}}>
             {/*sekcje*/}
             {user === null && wantToLogin ? <AppLogin/> : null}
