@@ -71,7 +71,7 @@ const AppPrzepisy = () => {
                 <div className="recipeIngredientsText">Sposób przygotowania:</div>
                 <div className="recipeIngredients">{recipeDescription}</div>
                 <button className="recipeButton" type="button"
-                        onClick={() => setShowRecipePanel(!showRecipePanel)}>EXIT
+                        onClick={() => setShowRecipePanel(!showRecipePanel)}>WRÓĆ
                 </button>
             </div>
         </div>}
