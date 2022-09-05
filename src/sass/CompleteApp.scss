@@ -1890,7 +1890,29 @@ table {
         }
 
         .addPlanForm {
+          height: 80vh;
+          color: green;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
 
+
+          .recipeButtons {
+            position: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            button {
+              background: #d5792f;
+              color: white;
+              font-weight: bold;
+              font-size: 0.9rem;
+              border: none;
+              height: 5vh;
+              width: 40vw;
+            }
+          }
         }
       }
     }
@@ -1964,7 +1986,8 @@ table {
     }
     //header
     .appHeader {
-      position: fixed;
+      position: absolute;
+      top: 0;
       display: flex;
       flex-direction: row;
       justify-content: space-between;
@@ -1999,8 +2022,488 @@ table {
         }
       }
     }
+    .appMain {
+      position: absolute;
+      top: 12.5vh;
+      left: 5vw;
+      width: 90vw;
+      height: 80vh;
+      border-radius: 1vh;
+      background: rgba(38, 38, 38, 0.25) center;
+      border: 1px #d5792f dashed;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .loginChangeButton {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .loginChangeText {
+          margin-top: 10vh;
+        }
+
+        button {
+          margin-top: 2vh;
+          background: #d5792f;
+          color: white;
+          font-weight: bold;
+          font-size: 0.9rem;
+          border: none;
+          height: 5vh;
+          width: 30vw;
+          box-shadow: #232324 1px 1px 1px;
+        }
+      }
+
+      .registrationForm {
+        background: rgba(35, 35, 36, 0.23);
+        width: 90%;
+        min-height: 50%;
+        align-self: center;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .errorMessage {
+          color: red;
+          height: 2vh;
+          width: 100%;
+          font-size: 0.7rem;
+        }
+
+        .regTitle {
+          text-align: center;
+          font-size: 1.5rem;
+          font-weight: bold;
+          margin: 3vh;
+        }
+
+        .inputWrapper {
+          display: flex;
+          flex-direction: row;
+          width: 70vw;
+          justify-content: space-between;
+          margin: 3vh;
+          align-items: center;
+          text-align: left;
+
+          input {
+            border: none;
+            background: rgba(35, 35, 36, 0.06);
+          }
+        }
+
+        button {
+          margin-top: 5vh;
+          background: #d5792f;
+          color: white;
+          font-weight: bold;
+          font-size: 0.9rem;
+          border: none;
+          height: 5vh;
+          min-width: 25vw;
+          box-shadow: #232324 1px 1px 1px;
+          margin-bottom: 5vh;
+        }
+
+        .regButtons {
+
+          button {
+            margin-top: 5vh;
+            background: #d5792f;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9rem;
+            border: none;
+            height: 5vh;
+            min-width: 25vw;
+            box-shadow: #232324 1px 1px 1px;
+          }
+        }
+      }
+
+      .content {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 70vh;
+
+        .pulpit {
+          display: flex;
+          height: 100%;
+          flex-direction: column;
+          align-items: center;
+          justify-content: flex-start;
+          text-align: center;
+
+          .buttonWrapper {
+            height: 20vh;
+            width: 80vw;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+
+            .addButton {
+              margin: 1vw;
+              height: 15vh;
+              width: 15vh;
+              border: 2px dashed #066406;
+              border-radius: 1vh;
+              display: flex;
+              flex-direction: column;
+              justify-content: space-evenly;
+              align-items: center;
+              color: #066406;
+              background: rgba(35, 35, 36, 0.09);
+
+              .buttonIcon {
+                font-weight: lighter;
+                min-width: 80%;
+                max-height: 20vh;
+                max-width: 20vh;
+                border-radius: 1vh;
+                border: 2px solid #066406;
+                font-size: 5rem;
+              }
+
+              .buttonText {
+                font-weight: bolder;
+              }
+            }
+          }
+
+          .planDisplay {
+            margin-top: 2vh;
+            height: 100%;
+            width: 97%;
+            border: 2px dashed #066406;
+            border-radius: 1vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            align-items: center;
+            color: #066406;
+            background: rgba(35, 35, 36, 0.09);
+          }
+        }
+
+        .przepisy {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+
+          .recipePanelBackground {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100vh;
+            width: 100vw;
+            background: rgba(35, 35, 36, 0.7);
+
+            .recipePanel {
+              border-radius: 20px;
+              position: absolute;
+              height: 82vh;
+              width: 90vw;
+              top: 12.5vh;
+              left: 5vw;
+              background: #232324;
+              color: white;
+              display: flex;
+              align-items: center;
+              overflow-y: scroll;
+              flex-direction: column;
+
+              .recipeName {
+                font-weight: bold;
+                font-size: 1.2rem;
+                margin: 5vw;
+              }
+
+              .recipeIngredientsText {
+                width: 90%;
+                font-weight: bold;
+                font-size: 1rem;
+                margin: 5vw;
+                text-align: left;
+              }
+
+              .recipeIngredients {
+                line-height: 1.2rem;
+                width: 90%;
+                font-size: 1rem;
+                margin: 1vh;
+                text-align: left;
+              }
+
+              .recipeButton {
+                margin-top: 2vh;
+                background: #d5792f;
+                color: white;
+                font-weight: bold;
+                font-size: 0.9rem;
+                border: none;
+                height: 5vh;
+                margin-bottom: 2vh;
+                min-width: 25vw;
+                box-shadow: #232324 1px 1px 1px;
+              }
+            }
+          }
+
+          .selectInput {
+            position: absolute;
+            left: 5vw;
+            top: 5vh;
+            font-weight: bold;
+            height: 10vh;
+            width: 30vw;
+            background: rgba(35, 35, 36, 0.08);
+            border: none;
+            font-size: 1.2rem;
+            text-align: center;
+            -webkit-appearance: none;
+          }
+
+          .recipeContainer {
+            position: absolute;
+            top: 15vh;
+            left: 5vh;
+            height: 60vh;
+            padding: 3vh;
+
+            .recipeItem {
+              height: 10vh;
+              padding-left: 5vw;
+              padding-right: 2vw;
+              list-style: none;
+              text-decoration: none;
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+              align-items: center;
+              min-width: 75vw;
+
+              button {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: 50px;
+                background: #d5792f;
+                color: white;
+                font-weight: bold;
+                font-size: 0.9rem;
+                border: none;
+                width: 80px;
+                border-radius: 10px;
+
+                .lupka {
+                  height: 70%;
+                  width: 70%;
+                  background: no-repeat center url("search_FILL0_wght400_GRAD0_opsz48.png");
+                  background-size: contain;
+                  pointer-events: none;
+                }
+              }
+            }
+          }
+
+          .recipeItem:nth-of-type(2n) {
+            background: rgba(35, 35, 36, 0.08);
+            list-style: none;
+            text-decoration: none;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+          }
+        }
+
+        .addRecipeForm {
+          height: 100%;
+          width: 85vw;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .recipeName {
+            display: flex;
+            flex-direction: row;
+            height: 5vh;
+            align-items: center;
+            justify-content: space-between;
+
+            input {
+              height: 3vh;
+              width: 45vw;
+              background: rgba(35, 35, 36, 0.08);
+              border: none;
+            }
+          }
+
+          .selectInput {
+            height: 3vh;
+            width: 45vw;
+            background: rgba(35, 35, 36, 0.08);
+            border: none;
+          }
+
+          .recipeMealTypeItems {
+            height: 3vh;
+            display: flex;
+            flex-direction: row;
+            margin-bottom: 3vh;
+            justify-content: space-between;
+          }
+
+          .recipeIngredients {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 3vh;
+            height: 30vh;
+
+            .recipeIngredientsItems {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-between;
+            }
+
+            input {
+              height: 3vh;
+              width: 35vw;
+              background: rgba(35, 35, 36, 0.08);
+              border: none;
+            }
+
+            button {
+              height: 3vh;
+              width: 10vw;
+              border: none;
+              background: #d5792f;
+              color: white;
+              font-weight: bold;
+              font-size: 0.9rem;
+            }
+          }
+
+          .recipeIngredientsList {
+            padding: 1vw;
+            margin-top: 3vh;
+            height: 8vh;
+            align-self: flex-start;
+            text-align: left;
+            overflow-x: hidden;
+            overflow-y: auto;
+            background: rgba(35, 35, 36, 0.08);
+            width: 100%;
+          }
+
+          .ingredientsLabel {
+            align-self: flex-start;
+            text-align: left;
+            margin-top: 3vh;
+            width: 85vw;
+          }
+
+          .recipeDescription {
+            align-self: flex-start;
+            text-align: left;
+            margin-bottom: 3vh;
+            width: 85vw;
+
+            textarea {
+              padding: 1vw;
+              margin-top: 3vh;
+              height: 20vh;
+              width: 97.5%;
+              align-self: flex-start;
+              text-align: left;
+              overflow-x: hidden;
+              overflow-y: auto;
+              background: rgba(35, 35, 36, 0.08);
+              border: none;
+              resize: none;
+            }
+          }
+
+          .recipeError {
+            font-size: 0.8rem;
+            margin-bottom: 3vh;
+            height: 3vh;
+          }
+
+          .recipeButtons {
+            position: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+
+            button {
+              background: #d5792f;
+              color: white;
+              margin-left: 3vw;
+              font-weight: bold;
+              font-size: 0.9rem;
+              border: none;
+              height: 5vh;
+              width: 10vw;
+            }
+          }
+        }
+
+        .addPlanForm {
+          height: 80vh;
+          color: green;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-evenly;
+
+
+          .recipeButtons {
+            position: center;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+            button {
+              background: #d5792f;
+              color: white;
+              font-weight: bold;
+              font-size: 0.9rem;
+              border: none;
+              height: 5vh;
+              width: 40vw;
+            }
+          }
+        }
+      }
+    }
+
+    //footer w aplikacji:
+    .footerText {
+      position: absolute;
+      bottom: 0;
+      width: 100vw;
+      height: 5vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: #232324;
+      color: white;
+      font-weight: bold;
+      font-size: 0.7rem;
+    }
   }
 }
+
+
 
 
 
