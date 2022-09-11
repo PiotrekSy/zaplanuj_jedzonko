@@ -10,7 +10,6 @@
 /*`#BD4932`  - kolor ikony kosza*/
 /*`#A1A194`  - kolor tekstu z wierszy w tabelach, ikony rozszerzonych funkcji*/
 
-
 /*## FONTY*/
 /*`Open Sans ` - tekst*/
 /*`Charmonman` - logo */
@@ -28,31 +27,107 @@
 /*## OBRAZY*/
 /*   [Cooking Photos]() - obrazy oraz zdjęcia do wykorzystania na Landing Page. */
 //reset:
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
   margin: 0;
   padding: 0;
   border: 0;
   font: inherit;
   vertical-align: baseline;
-
 }
 
 /* HTML5 display-role reset for older browsers */
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
   display: block;
 }
 
@@ -70,11 +145,9 @@ body::-webkit-scrollbar {
   display: none; /* for Chrome, Safari, and Opera */
 }
 
-
 body {
-
   line-height: 1;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 
   ::-webkit-scrollbar {
     height: 0;
@@ -82,11 +155,13 @@ body {
   }
 }
 
-ol, ul {
+ol,
+ul {
   list-style: none;
 }
 
-blockquote, q {
+blockquote,
+q {
   quotes: none;
 }
 
@@ -96,8 +171,8 @@ table {
 }
 
 //importy:
-@import url('https://fonts.googleapis.com/css2?family=Charmonman&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Charmonman&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap");
 
 //STRONKA===============================================
 
@@ -124,7 +199,6 @@ table {
         justify-content: center;
         height: 100%;
         width: 100%;
-
 
         .topBar {
           position: relative;
@@ -278,7 +352,7 @@ table {
       background-color: rgb(35, 35, 35);
 
       .logo {
-        font-family: 'Charmonman', cursive;
+        font-family: "Charmonman", cursive;
         display: flex;
         flex-direction: row;
         cursor: pointer;
@@ -295,7 +369,7 @@ table {
 
         .jedzonko {
           font-size: clamp(3vh, 4vw, 4.5vh);
-          color: #E58A20;
+          color: #e58a20;
         }
       }
     }
@@ -420,7 +494,7 @@ table {
       .benefitsBlur {
         height: 100%;
         z-index: 5;
-        background: rgba(0, 0, 0, 0.46)
+        background: rgba(0, 0, 0, 0.46);
       }
 
       .threeBenefits {
@@ -440,7 +514,6 @@ table {
           align-items: center;
           width: 80vw;
           text-align: center;
-
 
           .carouselTitle {
             font-size: 1.6rem;
@@ -568,7 +641,6 @@ table {
           width: 100vw;
           background: url("cook1.jpg") no-repeat top;
           background-size: cover;
-
         }
 
         .photo2 {
@@ -634,7 +706,6 @@ table {
         align-items: center;
 
         .contactInformation {
-
           p {
             align-self: center;
             width: 90vw;
@@ -685,7 +756,7 @@ table {
       }
 
       .contactFooter {
-        height: 10vh;
+        height: 50vh;
         width: 100vw;
         background-color: #232324;
         color: white;
@@ -693,6 +764,8 @@ table {
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        position: absolute;
+        bottom: 0;
 
         .author {
           margin: 0.5vh;
@@ -759,7 +832,9 @@ table {
     .mobileNavigation {
       display: none;
     }
-    .nav-menu-items a:hover, .nav-menu-items, .navbar-toggle,
+    .nav-menu-items a:hover,
+    .nav-menu-items,
+    .navbar-toggle,
     .nav-menu.active {
       display: none;
     }
@@ -776,7 +851,7 @@ table {
       z-index: 100;
 
       .logo {
-        font-family: 'Charmonman', cursive;
+        font-family: "Charmonman", cursive;
         display: flex;
         flex-direction: row;
         height: 100%;
@@ -796,7 +871,7 @@ table {
 
         .jedzonko {
           font-size: clamp(3vh, 3vw, 3vh);
-          color: #E58A20;
+          color: #e58a20;
         }
       }
     }
@@ -824,7 +899,11 @@ table {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        background: linear-gradient(-90deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.92));
+        background: linear-gradient(
+          -90deg,
+          rgba(0, 0, 0, 0),
+          rgba(0, 0, 0, 0.92)
+        );
 
         .carouselIcon {
           position: absolute;
@@ -964,7 +1043,7 @@ table {
       .benefitsBlur {
         height: 100%;
         z-index: 5;
-        background: rgba(0, 0, 0, 0.46)
+        background: rgba(0, 0, 0, 0.46);
       }
 
       .threeBenefits {
@@ -984,7 +1063,6 @@ table {
           align-items: center;
           width: 80vw;
           text-align: center;
-
 
           .carouselTitle {
             font-size: 2.2rem;
@@ -1041,7 +1119,6 @@ table {
               width: 100%;
               justify-content: center;
               align-items: center;
-
 
               .benefitsContactLabel {
                 text-align: center;
@@ -1154,7 +1231,7 @@ table {
             height: 5vh;
             color: white;
             justify-self: center;
-            text-align: center
+            text-align: center;
           }
         }
       }
@@ -1162,8 +1239,6 @@ table {
     //Contact
     .contact {
       padding-top: 10vh;
-      min-height: 85vh;
-
       width: 100vw;
       display: flex;
       flex-direction: column;
@@ -1289,7 +1364,7 @@ table {
       background-color: rgb(35, 35, 35);
 
       .logo {
-        font-family: 'Charmonman', cursive;
+        font-family: "Charmonman", cursive;
         display: flex;
         flex-direction: row;
         cursor: pointer;
@@ -1306,12 +1381,11 @@ table {
 
         .jedzonko {
           font-size: clamp(3vh, 4vw, 4.5vh);
-          color: #E58A20;
+          color: #e58a20;
         }
       }
     }
     //navs
-
 
     .navigation {
       display: none;
@@ -1333,7 +1407,6 @@ table {
         justify-content: center;
         height: 100%;
         width: 100%;
-
 
         .topBar {
           position: relative;
@@ -1445,7 +1518,6 @@ table {
       font-size: clamp(1em, 1.2em, 1.4em);
       text-decoration: none;
       color: #80511f;
-
     }
 
     .nav-menu-items {
@@ -1556,7 +1628,6 @@ table {
         }
 
         .regButtons {
-
           button {
             margin-top: 5vh;
             background: #d5792f;
@@ -1744,13 +1815,12 @@ table {
                 .lupka {
                   height: 100%;
                   width: 100%;
-                  background: no-repeat center url("search_FILL0_wght400_GRAD0_opsz48.png");
+                  background: no-repeat center
+                    url("search_FILL0_wght400_GRAD0_opsz48.png");
                   background-size: contain;
                   pointer-events: none;
                 }
               }
-
-
             }
           }
 
@@ -1861,7 +1931,6 @@ table {
               background: rgba(35, 35, 36, 0.08);
               border: none;
               resize: none;
-
             }
           }
 
@@ -1896,7 +1965,6 @@ table {
           flex-direction: column;
           justify-content: space-evenly;
 
-
           .recipeButtons {
             position: center;
             display: flex;
@@ -1917,7 +1985,6 @@ table {
       }
     }
 
-
     //footer w aplikacji:
     .footerText {
       position: absolute;
@@ -1935,7 +2002,6 @@ table {
   }
 
   @media only screen and (min-width: 1000px) {
-
     background: url("image.png");
     background-size: 20%;
     height: 100vh;
@@ -1980,7 +2046,9 @@ table {
     .mobileNavigation {
       display: none;
     }
-    .nav-menu-items a:hover, .nav-menu-items, .navbar-toggle,
+    .nav-menu-items a:hover,
+    .nav-menu-items,
+    .navbar-toggle,
     .nav-menu.active {
       display: none;
     }
@@ -1998,7 +2066,7 @@ table {
       z-index: 100;
 
       .logo {
-        font-family: 'Charmonman', cursive;
+        font-family: "Charmonman", cursive;
         display: flex;
         flex-direction: row;
         height: 100%;
@@ -2018,7 +2086,7 @@ table {
 
         .jedzonko {
           font-size: clamp(3vh, 3vw, 3vh);
-          color: #E58A20;
+          color: #e58a20;
         }
       }
     }
@@ -2068,7 +2136,6 @@ table {
         justify-content: center;
         align-items: center;
 
-
         .errorMessage {
           color: red;
           height: 2vh;
@@ -2112,7 +2179,6 @@ table {
         }
 
         .regButtons {
-
           button {
             margin-top: 5vh;
             background: #d5792f;
@@ -2128,7 +2194,6 @@ table {
       }
 
       .content {
-
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -2202,7 +2267,6 @@ table {
           align-items: center;
 
           .recipePanelBackground {
-
             .recipePanel {
               border-radius: 10px;
               position: absolute;
@@ -2305,7 +2369,8 @@ table {
                 .lupka {
                   height: 70%;
                   width: 70%;
-                  background: no-repeat center url("search_FILL0_wght400_GRAD0_opsz48.png");
+                  background: no-repeat center
+                    url("search_FILL0_wght400_GRAD0_opsz48.png");
                   background-size: contain;
                   pointer-events: none;
                 }
@@ -2462,7 +2527,6 @@ table {
           flex-direction: column;
           justify-content: space-evenly;
 
-
           .recipeButtons {
             position: center;
             display: flex;
@@ -2499,9 +2563,3 @@ table {
     }
   }
 }
-
-
-
-
-
-
